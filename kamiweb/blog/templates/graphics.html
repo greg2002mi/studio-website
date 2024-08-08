@@ -1,0 +1,346 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block head_js %}
+<link rel="stylesheet" href="{% static 'css/w3.css' %}">
+<link rel="stylesheet" href="{% static 'css/dropzone.min.css' %}">
+<style>
+.banner-area {
+	background: url({{ head.image.url }}) center;   /* background image */
+	{% if head.height != 0 %}
+	height: {{ head.height }}px;      /* header height */
+	{% else %}
+	/* no height since its 0 */
+	{% endif %}
+	background-size:cover
+	}
+@media (max-width: 767.98px) {
+	.banner-area.fullscreen {
+		height:700px !important
+		}
+	}
+	.banner-area .primary-btn {
+		padding-left:30px;
+		padding-right:30px
+	}
+	.banner-area .overlay-bg {
+		background-color:rgba(4,9,30,0.7);
+		z-index: 1
+	}
+	.banner-content {
+		position: relative;
+		text-align:center;
+		z-index: 2
+	}
+	.banner-content h1 {
+	color:#fff;
+	font-size:48px;
+	font-weight:700;
+	line-height:1em;
+	margin-top:20px;
+	margin-bottom:20px
+	}
+	@media (max-width: 414px) {
+	.banner-content h1 {
+		font-size:25px
+		}
+		}
+	.banner-content p { 
+	max-width:900px
+	}
+
+.cont2 {
+  position: relative;
+  {% if head.top != 0 %}
+  top: {{ head.top }}px;      /* distance of header from top */
+  {% else %}
+  /* no top since 0 */
+  {% endif %}
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+}
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.video-thumbnail {
+    position: relative;
+    #width: 100%;
+    height: auto;
+    background-color: #f3f3f3; /* Light grey background for loading state */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-thumbnail .loading-spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #3498db; /* Blue color */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+/* Keyframes for spin animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.video-thumbnail video {
+    display: none; /* Hide video until it's loaded */
+}
+
+.video-thumbnail.loaded video {
+    display: block; /* Show video when it's loaded */
+}
+
+.video-thumbnail.loaded .loading-spinner {
+    display: none; /* Hide spinner when video is loaded */
+}
+</style>
+<style>
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+	width: 100%;
+  }
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* Each gallery item */
+.single-gallery {
+    flex: 1 1 calc(25% - 20px); /* 4 items per row, with some spacing */
+    margin: 10px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+.content {
+    position: relative;
+    cursor: pointer;
+}
+
+.content-image {
+    width: 100%;
+    height: 200px; /* Adjust as needed */
+    object-fit: cover; /* Ensures image covers the area, maintaining aspect ratio */
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.content-overlay, .content-details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.content-overlay {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.content-details {
+    background: rgba(0, 0, 0, 0.7);
+    flex-direction: column;
+}
+
+.content:hover .content-image {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+.content:hover .content-overlay, 
+.content:hover .content-details {
+    opacity: 1;
+}		
+</style>
+<script>
+document.querySelectorAll('.single-gallery .content').forEach(content => {
+    content.addEventListener('click', function() {
+        const modalId = this.querySelector('.content-overlay').getAttribute('onclick').match(/'modal(\d+)'/)[1];
+        document.getElementById('modal' + modalId).style.display = 'block';
+    });
+});
+
+document.querySelectorAll('.modal .close').forEach(closeBtn => {
+    closeBtn.addEventListener('click', function() {
+        this.closest('.modal').style.display = 'none';
+    });
+});
+
+window.addEventListener('click', function(event) {
+    if (event.target.classList.contains('modal')) {
+        event.target.style.display = 'none';
+    }
+});
+</script>	
+{% endblock %}
+
+{% block app_content %}
+{% load crispy_forms_tags %}  
+{% get_current_language as LANGUAGE_CODE %}
+
+<!-- start banner Area -->
+<section class="banner-area relative" id="home">
+	<div class="overlay overlay-bg"></div>
+	<div class="container cont2">
+		<div class="row justify-content-center align-items-center">
+			<div class="banner-content col-lg-9 col-md-12 justify-content-center ">
+				<h1>
+					{{ head.title }}	
+				</h1>
+				<p class="text-white mx-auto">
+					{{ head.short }}
+				</p>
+			</div>											
+		</div>
+	</div>
+</section>
+<!-- End banner Area -->
+			
+<!-- Start gallery Area -->
+<section class="gallery-area pb-120">
+	<div class="container">
+		<div class="row d-flex justify-content-center">
+			<div class="col-md-12 pb-40 header-text text-center">
+				<h1 class="pb-10">{% translate "Our Graphic designs" %}</h1>
+				<p>
+					{% translate "Take a look at our Portfolio of graphic designs" %}
+				</p>
+			</div>
+		</div>							
+
+		<div class="row">
+			<div class="gallery-container">
+			{% for i in images %}
+				{% if i.published %}
+					<div class="col-lg-3">
+						<div class="single-gallery">
+							<div class="content">
+								<div class="content-overlay" onclick="document.getElementById('modal{{i.id}}').style.display='block'"></div>
+								<img class="content-image img-fluid d-block mx-auto" src="{{i.image.url}}" onclick="document.getElementById('modal{{i.id}}').style.display='block'" alt="">
+								<div class="content-details fadeIn-bottom" onclick="document.getElementById('modal{{i.id}}').style.display='block'">
+									<h3 class="content-title mx-auto">{{i.title}}</h3>
+									<p>{{i.short}}</p>
+								</div>
+							</div>
+						</div>
+					</div>	
+				{% endif %}
+			{% endfor %}											
+			</div>
+		</div>
+	</div>	
+</section>
+<!-- End gallery Area -->			
+
+<!-- Photo Preview-->
+{% for i in images %}
+	{% if i.published %}	
+	<div id="modal{{i.id}}" class="w3-modal" onclick="this.style.display='none'">
+		<span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+		<div class="w3-modal-content w3-animate-zoom">
+		  <img src="{{i.image.url}}" style="width:100%">
+		</div>
+	</div>
+	{% endif %}
+{% endfor %}
+<!-- ENd Photo Preview-->	
+
+
+{% endblock %}

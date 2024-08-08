@@ -1,0 +1,270 @@
+	<!DOCTYPE html>
+	{% load i18n %}
+	<html lang="{{ LANGUAGE_CODE }}" class="no-js">
+	<head>
+		<!-- Mobile Specific Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Favicon-->
+		<link rel="shortcut icon" href="img/fav.png">
+		<!-- Author Meta -->
+		<meta name="author" content="colorlib">
+		<!-- Meta Description -->
+		<meta name="description" content="">
+		<!-- Meta Keyword -->
+		<meta name="keywords" content="">
+		<!-- meta character set -->
+		<meta charset="UTF-8">
+		<!-- Site Title -->
+		<title>KAMI Production</title>
+
+        {% load static %}
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+			<!--
+			CSS
+			============================================= -->
+			<link rel="stylesheet" href="{% static 'css/linearicons.css' %}">
+			<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+			<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+			<link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+			<link rel="stylesheet" href="{% static 'css/nice-select.css' %}">							
+			<link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
+			<link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">
+			<link rel="stylesheet" href="{% static 'css/main.css' %}">
+			{% block head_js %}{% endblock %}
+			<style>
+				.callto-action-area .content h1,
+				.callto-action-area .content p {
+				  color: #fff !important;
+				}
+			  </style>
+		
+		</head>
+		<body>	
+		{% if messages %}
+		<ul class="messages">
+			{% for message in messages %}
+			<li{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+				{% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}Important: {% endif %}
+		{{ message }}
+			</li>
+	{% endfor %}
+		</ul>
+	{% endif %}
+	
+	    <header id="header" id="home">
+		  		<div class="header-top">
+		  			<div class="container">
+				  		<div class="row">
+				  			<div class="col-lg-6 col-sm-6 col-4 header-top-left no-padding">
+				  				<a href="tel:+8210 5736 0611">+8210 5736 0611</a>
+				  				<a href="mailto:kami@gmail.com">kami@gmail.com</a>					  
+				  			</div>
+				  			<div class="col-lg-6 col-sm-6 col-8 header-top-right no-padding">
+				  				<ul>
+									<li>
+									<div class="btn-header">
+										<form class="d-flex" action="{% url 'set_language' %}" method="post">
+										  {% csrf_token %}
+										  <input name="next" type="hidden" value="{{ redirect_to }}" />
+										  {% get_current_language as LANGUAGE_CODE %}
+										  {% get_available_languages as LANGUAGES %}
+										  {% get_language_info_list for LANGUAGES as languages %}
+										  <select class="form-select-sm" name="language" onchange="this.form.submit()">
+											{% for language in languages %}
+											  <option value="{{ language.code }}"
+												{% if language.code == LANGUAGE_CODE %}selected{% endif %}>
+												{{ language.code }}
+											  </option>
+											{% endfor %}
+										  </select>
+										</form>
+									</div>
+									</li>
+									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+									<li><a href="#"><i class="fa fa-behance"></i></a></li>
+				  				</ul>			
+				  			</div>
+				  		</div>			  					
+		  			</div>
+				</div>
+			    <div class="container main-menu">
+			    	<div class="row align-items-center justify-content-between d-flex">
+				      <div class="col-2">
+					  <div id="logo">
+				        <a href="{% url 'index' %}"><img src="{% static 'img/logo.png' %}" alt="" title="" /></a>
+				      </div>
+					  </div>
+					  <div class="col-10 d-flex justify-content-end">
+				      <nav id="nav-menu-container">
+				        <ul class="nav-menu">
+				          <li class="menu-active"><a href="{% url 'index' %}">{% translate "Main" %}</a></li>
+				          <li class="menu-has-children"><a href="">{% translate "Portfolio" %}</a>
+				            <ul>
+				              <li><a href="{% url 'vidcase' %}">{% translate "Video Cases" %}</a></li>
+				              <li><a href="{% url 'reel' %}">{% translate "Reels" %}</a></li>
+							  <li><a href="{% url 'photography' %}">{% translate "Photography" %}</a></li>
+							  <li><a href="{% url 'web_design' %}">{% translate "Websites" %}</a></li>
+							  <li><a href="{% url 'graphics' %}">{% translate "Graphic design" %}</a></li>
+				            </ul>
+				          </li>
+						  <li><a href="{% url 'smm' %}">{% translate "SMM Promotion" %}</a></li>
+						  <li><a href="{% url 'services' %}">{% translate "Our services" %}</a></li>
+						  <li><a href="{% url 'reviews' %}">{% translate "Customer reviews" %}</a></li>
+						  <li><a href="{% url 'our_clients' %}">{% translate "Our Clients" %}</a></li>
+						  <li><a href="{% url 'aboutus' %}">{% translate "About studio" %}</a></li>
+						  <li><a href="{% url 'contact' %}">{% translate "Contact" %}</a></li>
+
+						  <!--
+				          <li class="menu-has-children"><a href="">Graphic Design</a>
+				            <ul>
+				              <li><a href="blog-home.html">Blog Home</a></li>
+				              <li><a href="blog-single.html">Blog Single</a></li>
+				            </ul>
+				          </li>
+                          						  
+				          <li class="menu-has-children"><a href="">Pages</a>
+				            <ul>
+			              		<li><a href="project-details.html">Project Details</a></li>		
+				                <li><a href="elements.html">Elements</a></li>
+						          <li class="menu-has-children"><a href="">Level 2 </a>
+						            <ul>
+						              <li><a href="#">Item One</a></li>
+						              <li><a href="#">Item Two</a></li>
+						            </ul>
+						          </li>					                		
+				            </ul>
+				          </li>	
+-->						  
+
+				        </ul>
+						
+						
+				      </nav><!-- #nav-menu-container -->		    		
+			    	</div>
+					</div>
+			    </div>
+			  </header><!-- #header -->
+	
+	
+	
+	
+	
+	
+	
+	{% block app_content %}{% endblock %}
+	
+				<!-- start footer Area -->		
+			<footer class="footer-area section-gap">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-5 col-md-6 col-sm-6">
+							<div class="single-footer-widget">
+								<h6>About Us</h6>
+								<p>
+									If you own an Iphone, you’ve probably already worked out how much fun it is to use it to watch movies-it has that.
+								</p>
+								<p class="footer-text"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | KAMI PRODUCTION Web Development Team 
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>	
+								<p class="footer-text"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Web template: Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> 
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>								
+							</div>
+						</div>
+						<div class="col-lg-5  col-md-6 col-sm-6">
+							<div class="single-footer-widget">
+								<h6>Newsletter</h6>
+								<p>Stay update with our latest</p>
+								<div class="" id="mc_embed_signup">
+									<form target="_blank" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="form-inline">
+										<input class="form-control" name="EMAIL" placeholder="Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address'" required="" type="email">
+			                            	<button class="click-btn btn btn-default"><i class="lnr lnr-arrow-right" aria-hidden="true"></i></button>
+			                            	<div style="position: absolute; left: -5000px;">
+												<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
+											</div>
+										<div class="info"></div>
+									</form>
+								</div>
+							</div>
+						</div>						
+						<div class="col-lg-2 col-md-6 col-sm-6 social-widget">
+							<div class="single-footer-widget">
+								<h6>{% translate "Follow Us" %}</h6>
+								<p>{% translate "Let us be social" %}</p>
+								<div class="footer-social d-flex align-items-center">
+									<a href="#"><i class="fa fa-facebook"></i></a>
+									<a href="#"><i class="fa fa-twitter"></i></a>
+									<a href="#"><i class="fa fa-dribbble"></i></a>
+									<a href="#"><i class="fa fa-behance"></i></a>
+								</div>
+							</div>
+						</div>							
+					</div>
+				</div>
+			</footer>	
+			<!-- End footer Area -->	
+
+			<script src="{% static 'js/vendor/jquery-2.2.4.min.js' %}"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+			<script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>			
+			<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+  			<script src="{% static 'js/easing.min.js' %}"></script>			
+			<script src="{% static 'js/hoverIntent.js' %}"></script>
+			<script src="{% static 'js/superfish.min.js' %}"></script>	
+			<script src="{% static 'js/jquery.ajaxchimp.min.js' %}"></script>
+			<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>	
+			<script src="{% static 'js/owl.carousel.min.js' %}"></script>						
+			<script src="{% static 'js/jquery.nice-select.min.js' %}"></script>							
+			<script src="{% static 'js/mail-script.js' %}"></script>	
+			<script src="{% static 'js/main.js' %}"></script>
+			<script src="{% static 'js/dropzone.min.js' %}"></script>
+			<script src="{% static 'js/custom.js' %}"></script>
+<!--script>
+				$(document).ready(function() {
+					var modal = document.getElementById("videoModal");
+					var modalVideo = document.getElementById("modalVideo");
+					var modalVideoSource = document.getElementById("modalVideoSource");
+					var closeBtn = document.getElementsByClassName("close")[0];
+
+					function adjustModalVideoHeight() {
+						var windowHeight = window.innerHeight;
+						var maxVideoHeight = windowHeight * 0.8; // 80% of the window height
+						modalVideo.style.height = maxVideoHeight + 'px';
+						modalVideo.style.width = 'auto'; // Maintain aspect ratio
+					}
+
+					// Adjust the video height when the window is resized
+					window.onresize = adjustModalVideoHeight;
+
+					// When a video thumbnail is clicked
+					$('.video-thumbnail').on('click', function() {
+						var videoSrc = $(this).data('video');
+						modalVideoSource.src = videoSrc;
+						modalVideo.load();
+						modal.style.display = "flex";
+						modalVideo.play();
+						adjustModalVideoHeight(); // Adjust the height when the modal is shown
+					});
+
+					// When the close button is clicked
+					closeBtn.onclick = function() {
+						modal.style.display = "none";
+						modalVideo.pause();
+						modalVideo.currentTime = 0; // Reset the video to start
+					}
+
+					// When anywhere outside of the modal is clicked
+					window.onclick = function(event) {
+						if (event.target == modal) {
+							modal.style.display = "none";
+							modalVideo.pause();
+							modalVideo.currentTime = 0; // Reset the video to start
+						}
+					}
+				});
+			</script-->		
+			
+		</body>
+	</html>
