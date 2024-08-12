@@ -1,0 +1,1425 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-08-12 00:45+0000\n"
+"PO-Revision-Date: 2024-08-12 11:24+0900\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Generator: Poedit 3.4.4\n"
+
+#: blog/forms.py:17 dashboard/forms.py:17
+msgid "Yes"
+msgstr "Да"
+
+#: blog/forms.py:18 dashboard/forms.py:18
+msgid "No"
+msgstr "Нет"
+
+#: blog/models.py:13 dashboard/templates/dashboard.html:56 orders/models.py:6
+msgid "Applied"
+msgstr "принято"
+
+#: blog/models.py:14 dashboard/templates/dashboard.html:56 orders/models.py:7
+msgid "Processing"
+msgstr "На рассмотрении"
+
+#: blog/models.py:15 blog/models.py:22 dashboard/templates/dashboard.html:56
+#: orders/models.py:8
+msgid "Closed"
+msgstr "Закрыто"
+
+#: blog/models.py:19 dashboard/templates/manageaboutus.html:48
+#: dashboard/templates/manageheader.html:40
+#: dashboard/templates/manageimgcat.html:38
+#: dashboard/templates/managereelcat.html:38
+#: dashboard/templates/managevideocat.html:38
+msgid "New"
+msgstr "Новый"
+
+#: blog/models.py:20
+msgid "Called"
+msgstr "Позвонил"
+
+#: blog/models.py:21
+msgid "Waiting for responce"
+msgstr "В ожидании ответа"
+
+#: blog/models.py:26 blog/models.py:33
+msgid "---"
+msgstr "---"
+
+#: blog/models.py:27 blog/templates/services.html:167
+msgid "KRW"
+msgstr "KRW"
+
+#: blog/models.py:28 blog/templates/services.html:169
+msgid "USD"
+msgstr "$"
+
+#: blog/models.py:29 blog/templates/services.html:171
+msgid "RUB"
+msgstr "РУБ"
+
+#: blog/models.py:34
+msgid "Very unpleasant"
+msgstr "Очень плохо"
+
+#: blog/models.py:35
+msgid "Unpleasant"
+msgstr "Плохо"
+
+#: blog/models.py:36
+msgid "OK"
+msgstr "Удовлетворительно"
+
+#: blog/models.py:37
+msgid "Good"
+msgstr "Хорошо"
+
+#: blog/models.py:38
+msgid "Excellent"
+msgstr "Отлично"
+
+#: blog/models.py:42
+msgid "No lang"
+msgstr "Нет языка"
+
+#: blog/models.py:43 dashboard/templates/manageaboutus.html:90
+#: dashboard/templates/managecontactus.html:86
+#: dashboard/templates/manageegsmm.html:91
+#: dashboard/templates/manageserv.html:89 dashboard/templates/managesmm.html:84
+msgid "English"
+msgstr "Английский"
+
+#: blog/models.py:44 dashboard/templates/manageaboutus.html:90
+#: dashboard/templates/managecontactus.html:86
+#: dashboard/templates/manageegsmm.html:91
+#: dashboard/templates/manageserv.html:89 dashboard/templates/managesmm.html:84
+msgid "Russian"
+msgstr "Русский"
+
+#: blog/models.py:49
+msgid "None"
+msgstr "Пусто"
+
+#: blog/models.py:50
+msgid "Home"
+msgstr "Главная"
+
+#: blog/models.py:51
+msgid "Video case"
+msgstr "Видео кейсы"
+
+#: blog/models.py:52
+msgid "Reel"
+msgstr "Рилсы"
+
+#: blog/models.py:53 templates/base.html:107
+msgid "Photography"
+msgstr "Фотографии"
+
+#: blog/models.py:54
+msgid "Grachic Design"
+msgstr "Графический дизайн"
+
+#: blog/models.py:55
+msgid "Website"
+msgstr "Сайты"
+
+#: blog/models.py:56
+msgid "SMM"
+msgstr "SMM продвижение"
+
+#: blog/models.py:57
+msgid "Services"
+msgstr "Услуги"
+
+#: blog/models.py:58
+msgid "About Studio"
+msgstr "О студии"
+
+#: blog/models.py:59
+msgid "Clients"
+msgstr "Клиенты"
+
+#: blog/models.py:60
+msgid "Reviews"
+msgstr "Отзывы"
+
+#: blog/models.py:61
+msgid "Contacts"
+msgstr "Контакты"
+
+#: blog/models.py:62 blog/templates/services.html:178
+msgid "Make an order"
+msgstr "Сделать заявку"
+
+#: blog/models.py:63
+msgid "Call me"
+msgstr "Позвонить мне"
+
+#: blog/models.py:64
+msgid "Order"
+msgstr "Заказ"
+
+#: blog/models.py:65
+msgid "Write"
+msgstr "Написать"
+
+#: blog/models.py:66
+msgid "Success page"
+msgstr "Страница \"Успешно\""
+
+#: blog/models.py:67
+msgid "Failed page"
+msgstr "Страница \"Сбой\""
+
+#: blog/models.py:68
+msgid "Without title  (200) (-300)"
+msgstr "Без названия (200) (-300)"
+
+#: blog/models.py:78
+msgid "Address"
+msgstr "Адрес"
+
+#: blog/models.py:80 orders/models.py:16 orders/models.py:28 users/models.py:13
+msgid "email address"
+msgstr "Эл. почта"
+
+#: blog/models.py:327 dashboard/forms.py:382 dashboard/forms.py:421
+#: dashboard/forms.py:429 dashboard/forms.py:445 dashboard/forms.py:452
+#: dashboard/templates/manageaboutus.html:72
+#: dashboard/templates/managecontactus.html:72
+#: dashboard/templates/managereview.html:90
+#: dashboard/templates/managereview.html:92
+#: dashboard/templates/manageserv.html:72
+msgid "Content"
+msgstr "Контент"
+
+#: blog/templates/contact.html:151 templates/base.html:179
+msgid "Incheon, South Korea"
+msgstr "Инчхон, Республика Корея"
+
+#: blog/templates/contact.html:163
+msgid "Mon to Fri 9am to 6 pm"
+msgstr "С будние дни с 9 до 18 часов"
+
+#: blog/templates/contact.html:172
+msgid "Send us your query anytime!"
+msgstr "Оставьте вашу заявку в любое время!"
+
+#: blog/templates/contact.html:201 blog/templates/index.html:425
+msgid "Let us call You!"
+msgstr "Мы с Вами свяжемся!"
+
+#: blog/templates/contact.html:202 blog/templates/index.html:426
+msgid ""
+"Leave us your contacts and we will get back to you at your convenient time."
+msgstr "Введите свои контактные данные и мы перезвоним."
+
+#: blog/templates/contact.html:222 blog/templates/index.html:446
+#: orders/templates/order.html:166 orders/templates/write.html:161
+msgid "Submit"
+msgstr "Подать"
+
+#: blog/templates/graphics.html:301
+msgid "Our Graphic designs"
+msgstr "Наши примеры графического дизайна"
+
+#: blog/templates/graphics.html:303
+msgid "Take a look at our Portfolio of graphic designs"
+msgstr "Обзор нашего портфолио графического дизайна."
+
+#: blog/templates/index.html:189
+msgid "Take a look at some of our work"
+msgstr "Обзор наших работ."
+
+#: blog/templates/index.html:261 dashboard/templates/managemain.html:201
+#: dashboard/templates/managemain.html:239
+msgid "Services we provide:"
+msgstr "Наши услуги"
+
+#: blog/templates/index.html:306
+msgid "Some of our clients"
+msgstr "Наши клиенты"
+
+#: blog/templates/index.html:337 blog/templates/reviews.html:230
+msgid "Latest testimonials"
+msgstr "Недавние комментарии"
+
+#: blog/templates/index.html:373
+msgid "Our services fit for..."
+msgstr "Для кого наши услуги"
+
+#: blog/templates/index.html:418
+msgid "Let's talk!"
+msgstr "Хотите обсудить?"
+
+#: blog/templates/reviews.html:213
+msgid "Write Review"
+msgstr "Написать отзыв"
+
+#: blog/templates/reviews.html:268
+msgid "Testimonial from our Clients"
+msgstr "Отзывы наших клиентов"
+
+#: blog/templates/smm.html:249
+msgid "Examples"
+msgstr "Примеры"
+
+#: dashboard/forms.py:30
+msgid "Enter header title"
+msgstr "Введите название шапки"
+
+#: dashboard/forms.py:34
+msgid "Enter short description"
+msgstr "Введите короткое описание"
+
+#: dashboard/forms.py:44
+msgid "Enter height in pixels (optional)"
+msgstr "Введите высоту в пикселях (опция)"
+
+#: dashboard/forms.py:48
+msgid "Enter top offset in pixels (optional)"
+msgstr "Введите верхний сдвиг в пикселях (опция)"
+
+#: dashboard/forms.py:55 dashboard/forms.py:83 dashboard/forms.py:146
+#: dashboard/forms.py:208 dashboard/forms.py:264 dashboard/forms.py:294
+#: dashboard/forms.py:381 dashboard/forms.py:406 dashboard/forms.py:428
+#: dashboard/templates/manageaboutus.html:71
+#: dashboard/templates/manageclient.html:71
+#: dashboard/templates/managegfx.html:71
+#: dashboard/templates/manageheader.html:63
+#: dashboard/templates/manageimage.html:72
+#: dashboard/templates/managereel.html:153
+#: dashboard/templates/manageserv.html:71 dashboard/templates/managesmm.html:71
+#: dashboard/templates/managevideocase.html:72
+#: dashboard/templates/manageweb.html:71
+msgid "Title"
+msgstr "Название"
+
+#: dashboard/forms.py:56 dashboard/forms.py:84
+msgid "Short Description"
+msgstr "Короткое описание"
+
+#: dashboard/forms.py:57 dashboard/forms.py:85 dashboard/forms.py:265
+#: dashboard/forms.py:296 dashboard/forms.py:408 dashboard/forms.py:453
+#: dashboard/templates/manageclient.html:73
+#: dashboard/templates/managecontactus.html:74
+#: dashboard/templates/managegfx.html:73
+#: dashboard/templates/manageheader.html:65
+#: dashboard/templates/manageimage.html:73
+#: dashboard/templates/manageweb.html:73
+msgid "Image"
+msgstr "Изображение"
+
+#: dashboard/forms.py:58 dashboard/templates/manageheader.html:66
+msgid "Page"
+msgstr "Страница"
+
+#: dashboard/forms.py:59
+msgid "Height (in pixels)"
+msgstr "Высота (в пикселях)"
+
+#: dashboard/forms.py:60
+msgid "Top Offset (in pixels)"
+msgstr "Верхний сдвиг (в пикселях)"
+
+#: dashboard/forms.py:70 dashboard/forms.py:397
+msgid "Title of Graphic design"
+msgstr "Название графического дизайна"
+
+#: dashboard/forms.py:72
+msgid "Short description of Graphic design"
+msgstr "Короткое описание графического дизайна"
+
+#: dashboard/forms.py:75
+msgid "Magnification of image. Default = 3, 6 will take a half of row"
+msgstr ""
+"Увеличение картинки. По умолчанию 3, значение 6 увеличит картинку в половину "
+"ширины страницы"
+
+#: dashboard/forms.py:86 dashboard/forms.py:111 dashboard/forms.py:149
+#: dashboard/forms.py:178 dashboard/forms.py:211 dashboard/forms.py:237
+#: dashboard/forms.py:267 dashboard/forms.py:272 dashboard/forms.py:297
+#: dashboard/forms.py:355 dashboard/forms.py:362 dashboard/forms.py:385
+#: dashboard/forms.py:409 dashboard/forms.py:433
+msgid "Publish"
+msgstr "Опубликовать"
+
+#: dashboard/forms.py:87
+msgid "Magnification"
+msgstr "Увеличение"
+
+#: dashboard/forms.py:97 dashboard/forms.py:162 dashboard/forms.py:222
+msgid "Title of Video category in Russian"
+msgstr "Название Видео категории на Русском"
+
+#: dashboard/forms.py:99 dashboard/forms.py:164 dashboard/forms.py:224
+msgid "Title of Video category in English"
+msgstr "Название Видео категории на Английском"
+
+#: dashboard/forms.py:106 dashboard/forms.py:171 dashboard/forms.py:231
+#: dashboard/forms.py:319 dashboard/templates/manageimgcat.html:60
+#: dashboard/templates/managereelcat.html:60
+#: dashboard/templates/managevideocat.html:60
+msgid "In Russian"
+msgstr "На русском"
+
+#: dashboard/forms.py:107 dashboard/forms.py:172 dashboard/forms.py:232
+#: dashboard/forms.py:320 dashboard/forms.py:492 dashboard/forms.py:515
+#: dashboard/templates/manageimgcat.html:61
+#: dashboard/templates/managereelcat.html:61
+#: dashboard/templates/managesmm.html:72
+#: dashboard/templates/managevideocat.html:61
+msgid "In English"
+msgstr "На английском"
+
+#: dashboard/forms.py:124 dashboard/forms.py:194 dashboard/forms.py:250
+msgid "Title of a Video Case"
+msgstr "Название видео кейса"
+
+#: dashboard/forms.py:126
+msgid "Short description of video"
+msgstr "Короткое описание видео кейса"
+
+#: dashboard/forms.py:128
+msgid "Paste \"embed\" url link, taken from desired youtube clip"
+msgstr "Вставьте ссылку \"embed\", взятую с требуемого ютуб ролика"
+
+#: dashboard/forms.py:136 dashboard/forms.py:150 dashboard/forms.py:201
+#: dashboard/forms.py:210 dashboard/forms.py:257 dashboard/forms.py:266
+#: dashboard/templates/manageimage.html:75
+#: dashboard/templates/managereel.html:156
+#: dashboard/templates/managevideocase.html:76
+msgid "Category"
+msgstr "Категория"
+
+#: dashboard/forms.py:147 dashboard/forms.py:148 dashboard/forms.py:371
+msgid "Short description"
+msgstr "Короткое описание"
+
+#: dashboard/forms.py:152
+msgid "Production date"
+msgstr "Дата выпуска"
+
+#: dashboard/forms.py:209
+msgid "Your reel video"
+msgstr "Ваше видео рилса"
+
+#: dashboard/forms.py:285
+msgid "Customer or Company name"
+msgstr "Клиент или название компании"
+
+#: dashboard/forms.py:287
+msgid "Website address must start from www..."
+msgstr "Адрес веб-сайта, должно начинаться с www..."
+
+#: dashboard/forms.py:295 dashboard/templates/manageweb.html:72
+msgid "URL"
+msgstr "Ссылка"
+
+#: dashboard/forms.py:309
+msgid "SMM service in Russian"
+msgstr "Услуга SMM на русском"
+
+#: dashboard/forms.py:311
+msgid "SMM service in English"
+msgstr "Услуга SMM на английском"
+
+#: dashboard/forms.py:332
+msgid "Before"
+msgstr "ДО"
+
+#: dashboard/forms.py:334
+msgid "Description prior to..."
+msgstr "Описание ДО"
+
+#: dashboard/forms.py:336 dashboard/forms.py:342
+msgid "(Can be blank) Link without https://..."
+msgstr "(по желанию) Ссылка должна быть без https:// (http:// )"
+
+#: dashboard/forms.py:338
+msgid "After"
+msgstr "ПОСЛЕ"
+
+#: dashboard/forms.py:340
+msgid "Description after..."
+msgstr "Описание ПОСЛЕ"
+
+#: dashboard/forms.py:349
+msgid "Title of BEFORE example"
+msgstr "Название примера ДО"
+
+#: dashboard/forms.py:350
+msgid "Description of BEFORE example"
+msgstr "Описание примера ДО"
+
+#: dashboard/forms.py:351
+msgid "URL before"
+msgstr "Ссылка на пример ДО"
+
+#: dashboard/forms.py:352
+msgid "Title of RESULTS example"
+msgstr "Название примера ПОСЛЕ"
+
+#: dashboard/forms.py:353
+msgid "Description of RESULTS example"
+msgstr "Описание примера ПОСЛЕ"
+
+#: dashboard/forms.py:354
+msgid "URL after"
+msgstr "Ссылка ПОСЛЕ"
+
+#: dashboard/forms.py:356
+msgid "By default its for russian"
+msgstr "По умолчанию на русском"
+
+#: dashboard/forms.py:369
+msgid "Title of service"
+msgstr "Название услуги"
+
+#: dashboard/forms.py:373 dashboard/forms.py:383
+msgid "Price"
+msgstr "Цена"
+
+#: dashboard/forms.py:384
+msgid "Currency"
+msgstr "Валюта"
+
+#: dashboard/forms.py:386 dashboard/forms.py:432 dashboard/forms.py:454
+#: dashboard/templates/manageaboutus.html:75
+#: dashboard/templates/managecontactus.html:73
+#: dashboard/templates/manageegsmm.html:76
+#: dashboard/templates/manageserv.html:75
+msgid "Language"
+msgstr "Язык"
+
+#: dashboard/forms.py:399
+msgid "website url. omit https://"
+msgstr "Ссылка веб-сайта. без https://"
+
+#: dashboard/forms.py:407
+msgid "Website link"
+msgstr "Ссылка на Веб-сайт"
+
+#: dashboard/forms.py:419
+msgid "Title of a post"
+msgstr "Название поста"
+
+#: dashboard/forms.py:430
+msgid "Team image"
+msgstr "Фото команды"
+
+#: dashboard/forms.py:431
+msgid "Second image"
+msgstr "Второе фото"
+
+#: dashboard/forms.py:443 dashboard/forms.py:451
+#: dashboard/templates/managecontactus.html:71
+msgid "Greeting"
+msgstr "Приветствие"
+
+#: dashboard/forms.py:469
+msgid "Main video big"
+msgstr "Основное видео"
+
+#: dashboard/forms.py:470
+msgid "small video 2"
+msgstr "второе видео"
+
+#: dashboard/forms.py:471
+msgid "small video 3"
+msgstr "третье видео"
+
+#: dashboard/forms.py:480
+msgid "Services we provide"
+msgstr "Что мы делаем"
+
+#: dashboard/forms.py:482
+msgid "Services we provide in English"
+msgstr "на английском"
+
+#: dashboard/forms.py:484
+msgid "Services we provide in Korean"
+msgstr "на корейском"
+
+#: dashboard/forms.py:491 dashboard/forms.py:514
+#: dashboard/templates/managemain.html:208
+#: dashboard/templates/managemain.html:246
+msgid "Service"
+msgstr "Услуга"
+
+#: dashboard/forms.py:493 dashboard/forms.py:516
+msgid "In Korean"
+msgstr "На корейском"
+
+#: dashboard/forms.py:503
+msgid "What we achieve"
+msgstr "Для кого наши услуги "
+
+#: dashboard/forms.py:505
+msgid "What we achieve in English"
+msgstr "На английском"
+
+#: dashboard/forms.py:507
+msgid "What we achieve in Korean"
+msgstr "На корейском"
+
+#: dashboard/templates/dashboard.html:17
+#: dashboard/templates/manageaboutus.html:62
+#: dashboard/templates/manageclient.html:62
+#: dashboard/templates/managecontactus.html:62
+#: dashboard/templates/manageegsmm.html:62
+#: dashboard/templates/managegfx.html:62
+#: dashboard/templates/manageheader.html:55
+#: dashboard/templates/manageimage.html:63
+#: dashboard/templates/manageimgcat.html:52
+#: dashboard/templates/managemain.html:151
+#: dashboard/templates/managemain.html:200
+#: dashboard/templates/managemain.html:238
+#: dashboard/templates/managereel.html:144
+#: dashboard/templates/managereelcat.html:52
+#: dashboard/templates/managereview.html:62
+#: dashboard/templates/manageserv.html:62 dashboard/templates/managesmm.html:62
+#: dashboard/templates/managevideocase.html:63
+#: dashboard/templates/managevideocat.html:52
+#: dashboard/templates/manageweb.html:62
+msgid "All publications:"
+msgstr "Все публикации"
+
+#: dashboard/templates/dashboard.html:18
+msgid "Order list:"
+msgstr "Список заявок"
+
+#: dashboard/templates/dashboard.html:25
+msgid "Order date"
+msgstr "дата заявки"
+
+#: dashboard/templates/dashboard.html:26
+msgid "Name"
+msgstr "Имя"
+
+#: dashboard/templates/dashboard.html:27
+msgid "Phone"
+msgstr "Телефон"
+
+#: dashboard/templates/dashboard.html:28
+msgid "email"
+msgstr "Эл. почта"
+
+#: dashboard/templates/dashboard.html:29 dashboard/templates/dashboard.html:46
+msgid "Details"
+msgstr "Детали"
+
+#: dashboard/templates/dashboard.html:30
+msgid "Status"
+msgstr "Статус"
+
+#: dashboard/templates/dashboard.html:31
+#: dashboard/templates/manageaboutus.html:77
+#: dashboard/templates/manageclient.html:75
+#: dashboard/templates/managecontactus.html:75
+#: dashboard/templates/manageegsmm.html:77
+#: dashboard/templates/managegfx.html:75
+#: dashboard/templates/manageheader.html:69
+#: dashboard/templates/manageimage.html:76
+#: dashboard/templates/manageimgcat.html:62
+#: dashboard/templates/managemain.html:162
+#: dashboard/templates/managemain.html:209
+#: dashboard/templates/managemain.html:247
+#: dashboard/templates/managereel.html:157
+#: dashboard/templates/managereelcat.html:62
+#: dashboard/templates/managereview.html:75
+#: dashboard/templates/manageserv.html:76 dashboard/templates/managesmm.html:73
+#: dashboard/templates/managevideocase.html:78
+#: dashboard/templates/managevideocat.html:62
+#: dashboard/templates/manageweb.html:75
+msgid "Action"
+msgstr "Действие"
+
+#: dashboard/templates/dashboard.html:48 dashboard/templates/dashboard.html:52
+msgid "Order Details"
+msgstr "Детали заявки"
+
+#: dashboard/templates/dashboard.html:58
+msgid "Accept"
+msgstr "Принять"
+
+#: dashboard/templates/dashboard.html:60
+msgid "Finish"
+msgstr "Завершить"
+
+#: dashboard/templates/dashboard.html:62
+msgid "Done"
+msgstr "Завершено"
+
+#: dashboard/templates/edit_o.html:35
+msgid "Edit order"
+msgstr "Изм.заявки"
+
+#: dashboard/templates/edit_o.html:40 dashboard/templates/new_au.html:40
+#: dashboard/templates/new_cl.html:40 dashboard/templates/new_ct.html:40
+#: dashboard/templates/new_es.html:40 dashboard/templates/new_g.html:40
+#: dashboard/templates/new_he.html:41 dashboard/templates/new_i.html:40
+#: dashboard/templates/new_icat.html:26 dashboard/templates/new_main.html:40
+#: dashboard/templates/new_rcat.html:42 dashboard/templates/new_reel.html:42
+#: dashboard/templates/new_s.html:41 dashboard/templates/new_serv.html:41
+#: dashboard/templates/new_vc.html:39 dashboard/templates/new_vcat.html:41
+#: dashboard/templates/new_w.html:40
+msgid "Save"
+msgstr "Сохранить"
+
+#: dashboard/templates/manageaboutus.html:47
+msgid "About us post"
+msgstr "Пост о нас"
+
+#: dashboard/templates/manageaboutus.html:63
+#: dashboard/templates/manageclient.html:63
+#: dashboard/templates/managecontactus.html:63
+#: dashboard/templates/manageegsmm.html:63
+#: dashboard/templates/managegfx.html:63
+#: dashboard/templates/manageheader.html:56
+#: dashboard/templates/manageimage.html:64
+#: dashboard/templates/manageimgcat.html:53
+#: dashboard/templates/managereel.html:145
+#: dashboard/templates/managereelcat.html:53
+#: dashboard/templates/managereview.html:63
+#: dashboard/templates/manageserv.html:63 dashboard/templates/managesmm.html:63
+#: dashboard/templates/managevideocase.html:64
+#: dashboard/templates/managevideocat.html:53
+#: dashboard/templates/manageweb.html:63
+msgid "All data:"
+msgstr "Все данные:"
+
+#: dashboard/templates/manageaboutus.html:70
+#: dashboard/templates/manageclient.html:70
+#: dashboard/templates/manageegsmm.html:70
+#: dashboard/templates/managegfx.html:70
+#: dashboard/templates/manageimage.html:71
+#: dashboard/templates/managereel.html:152
+#: dashboard/templates/managereview.html:70
+#: dashboard/templates/manageserv.html:70 dashboard/templates/managesmm.html:70
+#: dashboard/templates/managevideocase.html:71
+#: dashboard/templates/manageweb.html:70
+msgid "Upload date"
+msgstr "Дата загрузки"
+
+#: dashboard/templates/manageaboutus.html:73
+msgid "Team"
+msgstr "Команда"
+
+#: dashboard/templates/manageaboutus.html:74
+msgid "Studio"
+msgstr "Студия"
+
+#: dashboard/templates/manageaboutus.html:76
+#: dashboard/templates/manageclient.html:74
+#: dashboard/templates/manageegsmm.html:75
+#: dashboard/templates/managegfx.html:74
+#: dashboard/templates/manageimage.html:74
+#: dashboard/templates/managereel.html:155
+#: dashboard/templates/manageserv.html:74
+#: dashboard/templates/managevideocase.html:75
+#: dashboard/templates/manageweb.html:74
+msgid "Published"
+msgstr "Опубликовано"
+
+#: dashboard/templates/manageaboutus.html:92
+#: dashboard/templates/manageclient.html:88
+#: dashboard/templates/managecontactus.html:89
+#: dashboard/templates/manageegsmm.html:92
+#: dashboard/templates/managegfx.html:88
+#: dashboard/templates/manageheader.html:83
+#: dashboard/templates/manageimage.html:89
+#: dashboard/templates/manageimgcat.html:72
+#: dashboard/templates/managemain.html:179
+#: dashboard/templates/managemain.html:218
+#: dashboard/templates/managemain.html:256
+#: dashboard/templates/managereel.html:172
+#: dashboard/templates/managereelcat.html:72
+#: dashboard/templates/manageserv.html:90 dashboard/templates/managesmm.html:85
+#: dashboard/templates/managevideocase.html:93
+#: dashboard/templates/managevideocat.html:72
+#: dashboard/templates/manageweb.html:88
+msgid "Edit"
+msgstr "Изменить"
+
+#: dashboard/templates/manageaboutus.html:93
+#: dashboard/templates/manageclient.html:89
+#: dashboard/templates/managecontactus.html:90
+#: dashboard/templates/manageegsmm.html:93
+#: dashboard/templates/managegfx.html:89
+#: dashboard/templates/manageheader.html:84
+#: dashboard/templates/manageimage.html:90
+#: dashboard/templates/manageimgcat.html:73
+#: dashboard/templates/managemain.html:180
+#: dashboard/templates/managemain.html:219
+#: dashboard/templates/managemain.html:257
+#: dashboard/templates/managereel.html:173
+#: dashboard/templates/managereelcat.html:73
+#: dashboard/templates/managereview.html:99
+#: dashboard/templates/manageserv.html:91 dashboard/templates/managesmm.html:86
+#: dashboard/templates/managevideocase.html:94
+#: dashboard/templates/managevideocat.html:73
+#: dashboard/templates/manageweb.html:89
+msgid "Delete"
+msgstr "Удалить"
+
+#: dashboard/templates/manageclient.html:47 dashboard/templates/new_cl.html:35
+msgid "Add new client"
+msgstr "Добавить нового клиента"
+
+#: dashboard/templates/manageclient.html:48
+msgid "Add client"
+msgstr "Добавить клиента"
+
+#: dashboard/templates/manageclient.html:72
+msgid "url"
+msgstr "Ссылка"
+
+#: dashboard/templates/managecontactus.html:47
+msgid "Contact us page content"
+msgstr "Контент страницы Контакты"
+
+#: dashboard/templates/managecontactus.html:48
+msgid "New page content"
+msgstr "Контент новой страницы"
+
+#: dashboard/templates/managecontactus.html:70
+msgid "Date"
+msgstr "Дата"
+
+#: dashboard/templates/manageegsmm.html:47
+msgid "Upload new example"
+msgstr "Загрузить новый пример"
+
+#: dashboard/templates/manageegsmm.html:48
+#: dashboard/templates/managegfx.html:48
+#: dashboard/templates/manageimage.html:48
+#: dashboard/templates/managesmm.html:48
+msgid "Upload image"
+msgstr "Загрузить изображение"
+
+#: dashboard/templates/manageegsmm.html:71
+msgid "Title Before"
+msgstr "Название ДО"
+
+#: dashboard/templates/manageegsmm.html:72
+msgid "TItle After"
+msgstr "Название ПОСЛЕ"
+
+#: dashboard/templates/manageegsmm.html:73
+msgid "Image Before"
+msgstr "Изображение ДО"
+
+#: dashboard/templates/manageegsmm.html:74
+msgid "Image After"
+msgstr "Изображение ПОСЛЕ"
+
+#: dashboard/templates/managegfx.html:47
+#: dashboard/templates/manageimage.html:47
+msgid "Upload images"
+msgstr "Загрузить изображения"
+
+#: dashboard/templates/managegfx.html:72
+#: dashboard/templates/manageheader.html:64
+#: dashboard/templates/managevideocase.html:73
+msgid "Short"
+msgstr "Короткое описание"
+
+#: dashboard/templates/manageheader.html:37 dashboard/templates/new_he.html:36
+msgid "Create new header entry"
+msgstr "Создать новый элемент шапки"
+
+#: dashboard/templates/manageheader.html:67
+msgid "Height"
+msgstr "Высота"
+
+#: dashboard/templates/manageheader.html:68
+msgid "Top"
+msgstr "Верхний сдвиг"
+
+#: dashboard/templates/manageimage.html:49
+msgid "Create new photography category"
+msgstr "Создать новую категорию фотографии"
+
+#: dashboard/templates/manageimgcat.html:37
+#: dashboard/templates/new_icat.html:21
+msgid "Create new Photography category"
+msgstr "Создать новую категорию фотографии"
+
+#: dashboard/templates/managemain.html:128
+msgid "Upload promo videos"
+msgstr "Загрузить промо видео"
+
+#: dashboard/templates/managemain.html:129
+msgid "Upload videos"
+msgstr "Загрузить видео"
+
+#: dashboard/templates/managemain.html:132
+msgid "List of Our services"
+msgstr "Список наших услуг"
+
+#: dashboard/templates/managemain.html:133
+#: dashboard/templates/manageserv.html:47
+#: dashboard/templates/manageserv.html:48
+msgid "Add service"
+msgstr "Добавить услугу"
+
+#: dashboard/templates/managemain.html:136
+msgid "What we accomplish"
+msgstr "Для кого наши услуги "
+
+#: dashboard/templates/managemain.html:137
+msgid "Add accomplishment"
+msgstr "Добавить наши цели"
+
+#: dashboard/templates/managemain.html:152
+msgid "Promotional video table:"
+msgstr "Таблица промо видео:"
+
+#: dashboard/templates/managemain.html:159
+msgid "Main video"
+msgstr "Основное видео"
+
+#: dashboard/templates/managemain.html:160
+msgid "2nd video"
+msgstr "2ое видео"
+
+#: dashboard/templates/managemain.html:161
+msgid "3rd video"
+msgstr "3ье видео"
+
+#: dashboard/templates/managereel.html:128
+msgid "Upload Reel"
+msgstr "Загрузить рилс"
+
+#: dashboard/templates/managereel.html:129
+msgid "Upload new reel"
+msgstr "Загрузить новый рилс"
+
+#: dashboard/templates/managereel.html:130
+msgid "Create new reel category"
+msgstr "Создать категорию рилсов"
+
+#: dashboard/templates/managereel.html:154
+msgid "video"
+msgstr "видео"
+
+#: dashboard/templates/managereelcat.html:37
+#: dashboard/templates/new_rcat.html:37
+msgid "Create new Reel category"
+msgstr "Создать категорию рилсов"
+
+#: dashboard/templates/managereview.html:47
+msgid "Manage reviews"
+msgstr "Управление \"Отзывы\""
+
+#: dashboard/templates/managereview.html:71
+msgid "name"
+msgstr "Имя"
+
+#: dashboard/templates/managereview.html:72
+msgid "role"
+msgstr "Позиция"
+
+#: dashboard/templates/managereview.html:73
+msgid "company"
+msgstr "компания"
+
+#: dashboard/templates/managereview.html:74
+msgid "content"
+msgstr "содержание"
+
+#: dashboard/templates/managereview.html:96
+msgid "No review content"
+msgstr "Нет содержания отзыва"
+
+#: dashboard/templates/managereview.html:107
+msgid ""
+"Just in case, here is a link to provide for reviews: http://www."
+"kamiproduction.com/write_review"
+msgstr ""
+"Вы также можете отправить данную ссылку http://www.kamiproduction.com/"
+"write_review непосредственно вашим клиентам, чтобы они оставили для вас "
+"отзыв."
+
+#: dashboard/templates/manageserv.html:73
+msgid "price"
+msgstr "цена"
+
+#: dashboard/templates/managesmm.html:47
+msgid "Create new SMM post"
+msgstr "Создать новый SMM пост"
+
+#: dashboard/templates/managevideocase.html:47
+msgid "New Video Case from Youtube"
+msgstr "Добавить видео кейс с ютуба"
+
+#: dashboard/templates/managevideocase.html:48
+msgid "Add Video case"
+msgstr "Добавить новый видео кейс"
+
+#: dashboard/templates/managevideocase.html:49
+msgid "New video category"
+msgstr "Новая категория для видео"
+
+#: dashboard/templates/managevideocase.html:74
+msgid "Youtube"
+msgstr "Ютуб"
+
+#: dashboard/templates/managevideocase.html:77
+msgid "Produced"
+msgstr "Выпуск"
+
+#: dashboard/templates/managevideocat.html:37
+#: dashboard/templates/new_vcat.html:36
+msgid "Create new Video category"
+msgstr "Создать категорию для видео"
+
+#: dashboard/templates/manageweb.html:47
+msgid "Upload Web design"
+msgstr "Загрузить Веб дизайн"
+
+#: dashboard/templates/manageweb.html:48
+msgid "Upload web design"
+msgstr "Загрузить Веб дизайн"
+
+#: dashboard/templates/new_au.html:35
+msgid "Create aboutus post"
+msgstr "Создать пост о нас"
+
+#: dashboard/templates/new_cl.html:43
+msgid ""
+"Please note: Ideal image must be transparent, height must be same for all "
+"logos, so if decided to have 80px then height for all logos must be 80px. "
+"And format must be either .png or .gif"
+msgstr ""
+"Важно: Логотип должен быть прозрачный без заднего фона, и для эстетичности "
+"высота логотипа должна быть всегда одинаковой, к примеру 80px. Формат "
+"логотипа .png или .gif"
+
+#: dashboard/templates/new_ct.html:35
+msgid "Add contact us content"
+msgstr "Добавить содержание Контакты"
+
+#: dashboard/templates/new_es.html:35
+msgid "create SMM example"
+msgstr "Создать пример SMM"
+
+#: dashboard/templates/new_g.html:35 dashboard/templates/new_i.html:35
+msgid "Add a new Image"
+msgstr "Добавить новое изображение"
+
+#: dashboard/templates/new_main.html:35
+msgid "Main page"
+msgstr "Главная"
+
+#: dashboard/templates/new_reel.html:37
+msgid "Upload reel"
+msgstr "Загрузить рилс"
+
+#: dashboard/templates/new_s.html:36
+msgid "create SMM content"
+msgstr "Создать контент SMM"
+
+#: dashboard/templates/new_serv.html:36
+msgid "Create Service"
+msgstr "Создать услугу"
+
+#: dashboard/templates/new_vc.html:34
+msgid "Add Video case from youtube"
+msgstr "Добавить видео кейс с ютуба"
+
+#: dashboard/templates/new_w.html:35
+msgid "Add a new Web design"
+msgstr "Добавить новый веб дизайн"
+
+#: dashboard/views.py:47
+msgid "Successfully changed."
+msgstr "Успешно изменено."
+
+#: dashboard/views.py:50 dashboard/views.py:84 dashboard/views.py:127
+#: dashboard/views.py:154 dashboard/views.py:197 dashboard/views.py:238
+#: dashboard/views.py:257 dashboard/views.py:293 dashboard/views.py:320
+#: dashboard/views.py:351 dashboard/views.py:386 dashboard/views.py:406
+#: dashboard/views.py:442 dashboard/views.py:470 dashboard/views.py:501
+#: dashboard/views.py:536 dashboard/views.py:555 dashboard/views.py:591
+#: dashboard/views.py:625 dashboard/views.py:662 dashboard/views.py:690
+#: dashboard/views.py:721 dashboard/views.py:748 dashboard/views.py:780
+#: dashboard/views.py:807 dashboard/views.py:838 dashboard/views.py:866
+#: dashboard/views.py:900 dashboard/views.py:934 dashboard/views.py:971
+#: dashboard/views.py:1005 dashboard/views.py:1036 dashboard/views.py:1079
+#: dashboard/views.py:1116 dashboard/views.py:1160 dashboard/views.py:1178
+#: dashboard/views.py:1196 dashboard/views.py:1227 dashboard/views.py:1246
+#: dashboard/views.py:1265
+msgid "Not validated."
+msgstr "Не подтверждено"
+
+#: dashboard/views.py:72
+msgid "Header entry data has been permanently deleted."
+msgstr "Элемент шапки безвозвратно удален."
+
+#: dashboard/views.py:81 dashboard/views.py:124 dashboard/views.py:151
+#: dashboard/views.py:194 dashboard/views.py:235 dashboard/views.py:254
+#: dashboard/views.py:290 dashboard/views.py:317 dashboard/views.py:348
+#: dashboard/views.py:383 dashboard/views.py:403 dashboard/views.py:439
+#: dashboard/views.py:467 dashboard/views.py:498 dashboard/views.py:533
+#: dashboard/views.py:552 dashboard/views.py:588 dashboard/views.py:622
+#: dashboard/views.py:659 dashboard/views.py:687 dashboard/views.py:718
+#: dashboard/views.py:745 dashboard/views.py:777 dashboard/views.py:804
+#: dashboard/views.py:835 dashboard/views.py:863 dashboard/views.py:897
+#: dashboard/views.py:931 dashboard/views.py:968 dashboard/views.py:1002
+#: dashboard/views.py:1033 dashboard/views.py:1076 dashboard/views.py:1113
+#: dashboard/views.py:1157 dashboard/views.py:1175 dashboard/views.py:1193
+#: dashboard/views.py:1224 dashboard/views.py:1243 dashboard/views.py:1262
+msgid "Successfully saved."
+msgstr "Успешно сохранено."
+
+#: dashboard/views.py:141
+msgid "Video category has been permanently deleted."
+msgstr "Элемент видео категории безвозвратно удален."
+
+#: dashboard/views.py:212
+msgid "Video data has been permanently deleted."
+msgstr "Элемент видео безвозвратно удален."
+
+#: dashboard/views.py:307
+msgid "Reel category has been permanently deleted."
+msgstr "Элемент категории рилса безвозвратно удален."
+
+#: dashboard/views.py:366
+msgid "Reel has been permanently deleted."
+msgstr "Элемент рилса был безвозвратно удален."
+
+#: dashboard/views.py:457
+msgid "Image category has been permanently deleted."
+msgstr "Элемент категории изображений безвозвратно удален."
+
+#: dashboard/views.py:516
+msgid "Image data has been permanently deleted."
+msgstr "Элемент изображения безвозвратно удален."
+
+#: dashboard/views.py:605
+msgid "Graphic design Image data has been permanently deleted."
+msgstr "Элемент графического дизайна безвозвратно удален."
+
+#: dashboard/views.py:677
+msgid "Web design data has been permanently deleted."
+msgstr "Элемент веб дизайна безвозвратно удален."
+
+#: dashboard/views.py:735
+msgid "SMM data has been permanently deleted."
+msgstr "Данные SMM безвозвратно удалены."
+
+#: dashboard/views.py:794
+msgid "SMM example has been permanently deleted."
+msgstr "Примеры SMM безвозвратно удалены."
+
+#: dashboard/views.py:852
+msgid "Service has been permanently deleted."
+msgstr "Услуга безвозвратно удалена."
+
+#: dashboard/views.py:914
+msgid "Client data has been permanently deleted."
+msgstr "Клиент безвозвратно удален."
+
+#: dashboard/views.py:985
+msgid "Aboutus post has been permanently deleted."
+msgstr "Пост о нас безвозвратно удален."
+
+#: dashboard/views.py:1050
+msgid "Review has been permanently deleted."
+msgstr "Отзыв безвозвратно удален."
+
+#: dashboard/views.py:1067
+msgid "Contacts page has been permanently deleted."
+msgstr "Страница контактов безвозвратно удален."
+
+#: dashboard/views.py:1132
+msgid "Promo videos set has been permanently deleted."
+msgstr "Набор промо видео роликов безвозвратно удален."
+
+#: dashboard/views.py:1140
+msgid "Our service has been permanently deleted."
+msgstr "Услуга безвозвратно удалена."
+
+#: dashboard/views.py:1148
+msgid "Entry has been permanently deleted."
+msgstr "Данные безвозвратно удалены."
+
+#: orders/forms.py:14 orders/forms.py:38 orders/forms.py:72
+msgid "Leave us your name"
+msgstr "Как вас зовут?"
+
+#: orders/forms.py:16 orders/forms.py:40
+msgid "Your email to contact you"
+msgstr "Ваша эл.почта "
+
+#: orders/forms.py:18 orders/forms.py:42
+msgid "Your phone number"
+msgstr "Ваш телефон номер"
+
+#: orders/forms.py:25 orders/forms.py:55 orders/forms.py:85
+msgid "Full Name"
+msgstr "ФИО"
+
+#: orders/forms.py:26 orders/forms.py:56
+msgid "Phone Number"
+msgstr "Ваш телефон номер"
+
+#: orders/forms.py:27 orders/forms.py:57
+msgid "Email Address"
+msgstr "Эл. почта"
+
+#: orders/forms.py:44
+msgid "What service are you interested in?"
+msgstr "Что вас интересует?"
+
+#: orders/forms.py:46
+msgid "What time is convenient for you to receive a call?"
+msgstr "В какое время вам удобно созвониться?"
+
+#: orders/forms.py:48
+msgid "Any questions? Or anything you would like to add?"
+msgstr "Тут можете добавить всё что вы считаете важным для вас."
+
+#: orders/forms.py:58
+msgid "Q1"
+msgstr "В1"
+
+#: orders/forms.py:59
+msgid "Q2"
+msgstr "В2"
+
+#: orders/forms.py:60
+msgid "Note"
+msgstr "Примечание"
+
+#: orders/forms.py:74
+msgid "Your role or position"
+msgstr "Ваша должность или звание"
+
+#: orders/forms.py:76
+msgid "Your workplace"
+msgstr "Ваше место работы"
+
+#: orders/forms.py:78
+msgid "Your review"
+msgstr "Ваш отзыв"
+
+#: orders/forms.py:86
+msgid "Role or position"
+msgstr "Должность"
+
+#: orders/forms.py:87
+msgid "Company name"
+msgstr "Компания"
+
+#: orders/forms.py:88
+msgid "Review"
+msgstr "Отзыв"
+
+#: orders/forms.py:89
+msgid "Rank us from 1 (bad) to 5 (Excellent)"
+msgstr "Оцените нас"
+
+#: orders/templates/error.html:142
+msgid "Failed"
+msgstr "Сбой"
+
+#: orders/templates/error.html:143
+msgid "Try again later or contact us<br/> and we will get back to you shortly!"
+msgstr ""
+"Попробуйте позже или свяжитесь с нами любым удобным способом, и мы "
+"обязательно свяжемся с вами!"
+
+#: orders/templates/order.html:141
+msgid ""
+"Please be aware that the prices provided are estimates. The final price will "
+"be determined once all conditions are finalized with you. Additionally, "
+"please note that this application does not constitute a payment. It is "
+"merely a reservation request. Kindly complete the required fields, and we "
+"will get in touch with you shortly."
+msgstr ""
+"Обратите внимание, что предоставленные цены являются ориентировочными. "
+"Окончательная стоимость будет определена после согласования всех условий с "
+"вами. Также приносим во внимание, что данная анкета не включает функцию "
+"платежа. Это лишь билет на запрос. Пожалуйста, заполните все обязательные "
+"поля, и мы свяжемся с вами в ближайшее время."
+
+#: orders/templates/order.html:145
+msgid "You have chosen:"
+msgstr "Ваш выбор:"
+
+#: orders/templates/success.html:144
+msgid "Success"
+msgstr "Готово"
+
+#: orders/templates/success.html:145
+msgid "We received your request;<br/> we'll be in touch shortly!"
+msgstr ""
+"Мы получили ваш запрос!<br/> Мы свяжемся с вами в указанное для вас время!"
+
+#: orders/templates/write.html:142
+msgid "We Value Your Feedback!"
+msgstr "Мы ценим ваше мнение!"
+
+#: orders/templates/write.html:144
+msgid ""
+"Thank you for choosing us! Your experience with us is important, and we’d "
+"love to hear your thoughts.<br><br>Please take a moment to leave a review "
+"and let us know how we did. Your feedback helps us improve and continue "
+"providing the best service possible."
+msgstr ""
+"Спасибо, что выбрали нас! Ваш опыт работы с нами важен для нас, и нам "
+"хотелось бы услышать ваше мнение.<br><br>Пожалуйста, уделите немного "
+"времени, чтобы оставить отзыв и сообщить нам, как мы справились. Ваши "
+"комментарии помогают нам улучшаться и продолжать предоставлять лучший сервис."
+
+#: templates/base.html:102
+msgid "Main"
+msgstr "Главная"
+
+#: templates/base.html:103
+msgid "Portfolio"
+msgstr "Портфолио"
+
+#: templates/base.html:105
+msgid "Video Cases"
+msgstr "Видео Кейсы"
+
+#: templates/base.html:106
+msgid "Reels"
+msgstr "Рилсы"
+
+#: templates/base.html:108
+msgid "Websites"
+msgstr "Сайты"
+
+#: templates/base.html:109
+msgid "Graphic design"
+msgstr "Графический дизайн"
+
+#: templates/base.html:112
+msgid "SMM Promotion"
+msgstr "SMM"
+
+#: templates/base.html:113
+msgid "Our services"
+msgstr "Услуги"
+
+#: templates/base.html:114
+msgid "Customer reviews"
+msgstr "Отзывы"
+
+#: templates/base.html:115
+msgid "Our Clients"
+msgstr "Клиенты"
+
+#: templates/base.html:116
+msgid "About studio"
+msgstr "О студии"
+
+#: templates/base.html:117
+msgid "Contact"
+msgstr "Контакты"
+
+#: templates/base.html:164
+msgid "About Us"
+msgstr "О нас"
+
+#: templates/base.html:166
+msgid ""
+"At our creative studio, we weave together the art of storytelling through "
+"dynamic video production, captivating social media strategies, cutting-edge "
+"web development, and striking graphic design, crafting digital experiences "
+"that resonate and inspire."
+msgstr ""
+"В нашей креативной студии мы объединяем искусство повествования через "
+"динамичное видеопроизводство, увлекательные стратегии в социальных сетях, "
+"передовую веб-разработку и яркий графический дизайн, создавая цифровые "
+"впечатления, которые находят отклик и вдохновляют."
+
+#: templates/base.html:178
+msgid "Our address:"
+msgstr "Наш адрес:"
+
+#: templates/base.html:188
+msgid "Follow Us"
+msgstr "Присоединяйтесь к нам"
+
+#: templates/base.html:189
+msgid "Let us be social"
+msgstr "Будем на связи!"
+
+#: users/managers.py:12
+msgid "The Email must be set"
+msgstr "Обязательно предоставьте вашу эл.почту"
+
+#: users/managers.py:28
+msgid "Superuser must have is_staff=True."
+msgstr "Superuser must have is_staff=True."
+
+#: users/managers.py:30
+msgid "Superuser must have is_superuser=True."
+msgstr "Superuser must have is_superuser=True."
+
+#: users/templates/login2.html:9
+msgid "Sign In"
+msgstr "Регистрация"
+
+#: users/templates/login2.html:13
+msgid "Login"
+msgstr "Логин"
+
+#: users/templates/login2.html:15
+msgid "Don't have an account? "
+msgstr "У вас нет учетной записи?"
+
+#: users/templates/login2.html:15
+msgid "Create an account"
+msgstr "Создать учетную запись"
+
+#: users/templates/register.html:35 users/templates/register2.html:9
+#: users/templates/register2.html:13
+msgid "Register"
+msgstr "Зарегестрироваться"
+
+#: users/templates/register2.html:15
+msgid "If you already have an account, <a href=\"/login\">login</a> instead."
+msgstr "Если у вас есть учетная запись, <a href=\"/login\">нажмите сюда</a>."
+
+#: users/views.py:31
+msgid "You are now logged in as {}."
+msgstr "Вы вошли как {}."
+
+#: users/views.py:34 users/views.py:36
+msgid "Invalid username or password."
+msgstr "Неверная почта или пароль."
+
+#: users/views.py:42
+msgid "You have successfully logged out."
+msgstr "Вы успешно вошли."
+
+#: users/views.py:51
+msgid "Registration successful."
+msgstr "Регистрация выполнена успешно."
+
+#: users/views.py:53
+msgid "Unsuccessful registration. Invalid information."
+msgstr "Регистрация не выполнена. Неверная информация."

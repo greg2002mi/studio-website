@@ -1,0 +1,1398 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-08-12 00:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+#: blog/forms.py:17 dashboard/forms.py:17
+msgid "Yes"
+msgstr ""
+
+#: blog/forms.py:18 dashboard/forms.py:18
+msgid "No"
+msgstr ""
+
+#: blog/models.py:13 dashboard/templates/dashboard.html:56 orders/models.py:6
+msgid "Applied"
+msgstr ""
+
+#: blog/models.py:14 dashboard/templates/dashboard.html:56 orders/models.py:7
+msgid "Processing"
+msgstr ""
+
+#: blog/models.py:15 blog/models.py:22 dashboard/templates/dashboard.html:56
+#: orders/models.py:8
+msgid "Closed"
+msgstr ""
+
+#: blog/models.py:19 dashboard/templates/manageaboutus.html:48
+#: dashboard/templates/manageheader.html:40
+#: dashboard/templates/manageimgcat.html:38
+#: dashboard/templates/managereelcat.html:38
+#: dashboard/templates/managevideocat.html:38
+msgid "New"
+msgstr ""
+
+#: blog/models.py:20
+msgid "Called"
+msgstr ""
+
+#: blog/models.py:21
+msgid "Waiting for responce"
+msgstr ""
+
+#: blog/models.py:26 blog/models.py:33
+msgid "---"
+msgstr ""
+
+#: blog/models.py:27 blog/templates/services.html:167
+msgid "KRW"
+msgstr ""
+
+#: blog/models.py:28 blog/templates/services.html:169
+msgid "USD"
+msgstr ""
+
+#: blog/models.py:29 blog/templates/services.html:171
+msgid "RUB"
+msgstr ""
+
+#: blog/models.py:34
+msgid "Very unpleasant"
+msgstr ""
+
+#: blog/models.py:35
+msgid "Unpleasant"
+msgstr ""
+
+#: blog/models.py:36
+msgid "OK"
+msgstr ""
+
+#: blog/models.py:37
+msgid "Good"
+msgstr ""
+
+#: blog/models.py:38
+msgid "Excellent"
+msgstr ""
+
+#: blog/models.py:42
+msgid "No lang"
+msgstr ""
+
+#: blog/models.py:43 dashboard/templates/manageaboutus.html:90
+#: dashboard/templates/managecontactus.html:86
+#: dashboard/templates/manageegsmm.html:91
+#: dashboard/templates/manageserv.html:89 dashboard/templates/managesmm.html:84
+msgid "English"
+msgstr ""
+
+#: blog/models.py:44 dashboard/templates/manageaboutus.html:90
+#: dashboard/templates/managecontactus.html:86
+#: dashboard/templates/manageegsmm.html:91
+#: dashboard/templates/manageserv.html:89 dashboard/templates/managesmm.html:84
+msgid "Russian"
+msgstr ""
+
+#: blog/models.py:49
+msgid "None"
+msgstr ""
+
+#: blog/models.py:50
+msgid "Home"
+msgstr ""
+
+#: blog/models.py:51
+msgid "Video case"
+msgstr ""
+
+#: blog/models.py:52
+msgid "Reel"
+msgstr ""
+
+#: blog/models.py:53 templates/base.html:107
+msgid "Photography"
+msgstr ""
+
+#: blog/models.py:54
+msgid "Grachic Design"
+msgstr ""
+
+#: blog/models.py:55
+msgid "Website"
+msgstr ""
+
+#: blog/models.py:56
+msgid "SMM"
+msgstr ""
+
+#: blog/models.py:57
+msgid "Services"
+msgstr ""
+
+#: blog/models.py:58
+msgid "About Studio"
+msgstr ""
+
+#: blog/models.py:59
+msgid "Clients"
+msgstr ""
+
+#: blog/models.py:60
+msgid "Reviews"
+msgstr ""
+
+#: blog/models.py:61
+msgid "Contacts"
+msgstr ""
+
+#: blog/models.py:62 blog/templates/services.html:178
+msgid "Make an order"
+msgstr ""
+
+#: blog/models.py:63
+msgid "Call me"
+msgstr ""
+
+#: blog/models.py:64
+msgid "Order"
+msgstr ""
+
+#: blog/models.py:65
+msgid "Write"
+msgstr ""
+
+#: blog/models.py:66
+msgid "Success page"
+msgstr ""
+
+#: blog/models.py:67
+msgid "Failed page"
+msgstr ""
+
+#: blog/models.py:68
+msgid "Without title  (200) (-300)"
+msgstr ""
+
+#: blog/models.py:78
+msgid "Address"
+msgstr ""
+
+#: blog/models.py:80 orders/models.py:16 orders/models.py:28 users/models.py:13
+msgid "email address"
+msgstr ""
+
+#: blog/models.py:327 dashboard/forms.py:382 dashboard/forms.py:421
+#: dashboard/forms.py:429 dashboard/forms.py:445 dashboard/forms.py:452
+#: dashboard/templates/manageaboutus.html:72
+#: dashboard/templates/managecontactus.html:72
+#: dashboard/templates/managereview.html:90
+#: dashboard/templates/managereview.html:92
+#: dashboard/templates/manageserv.html:72
+msgid "Content"
+msgstr ""
+
+#: blog/templates/contact.html:151 templates/base.html:179
+msgid "Incheon, South Korea"
+msgstr ""
+
+#: blog/templates/contact.html:163
+msgid "Mon to Fri 9am to 6 pm"
+msgstr ""
+
+#: blog/templates/contact.html:172
+msgid "Send us your query anytime!"
+msgstr ""
+
+#: blog/templates/contact.html:201 blog/templates/index.html:425
+msgid "Let us call You!"
+msgstr ""
+
+#: blog/templates/contact.html:202 blog/templates/index.html:426
+msgid ""
+"Leave us your contacts and we will get back to you at your convenient time."
+msgstr ""
+
+#: blog/templates/contact.html:222 blog/templates/index.html:446
+#: orders/templates/order.html:166 orders/templates/write.html:161
+msgid "Submit"
+msgstr ""
+
+#: blog/templates/graphics.html:301
+msgid "Our Graphic designs"
+msgstr ""
+
+#: blog/templates/graphics.html:303
+msgid "Take a look at our Portfolio of graphic designs"
+msgstr ""
+
+#: blog/templates/index.html:189
+msgid "Take a look at some of our work"
+msgstr ""
+
+#: blog/templates/index.html:261 dashboard/templates/managemain.html:201
+#: dashboard/templates/managemain.html:239
+msgid "Services we provide:"
+msgstr ""
+
+#: blog/templates/index.html:306
+msgid "Some of our clients"
+msgstr ""
+
+#: blog/templates/index.html:337 blog/templates/reviews.html:230
+msgid "Latest testimonials"
+msgstr ""
+
+#: blog/templates/index.html:373
+msgid "Our services fit for..."
+msgstr ""
+
+#: blog/templates/index.html:418
+msgid "Let's talk!"
+msgstr ""
+
+#: blog/templates/reviews.html:213
+msgid "Write Review"
+msgstr ""
+
+#: blog/templates/reviews.html:268
+msgid "Testimonial from our Clients"
+msgstr ""
+
+#: blog/templates/smm.html:249
+msgid "Examples"
+msgstr ""
+
+#: dashboard/forms.py:30
+msgid "Enter header title"
+msgstr ""
+
+#: dashboard/forms.py:34
+msgid "Enter short description"
+msgstr ""
+
+#: dashboard/forms.py:44
+msgid "Enter height in pixels (optional)"
+msgstr ""
+
+#: dashboard/forms.py:48
+msgid "Enter top offset in pixels (optional)"
+msgstr ""
+
+#: dashboard/forms.py:55 dashboard/forms.py:83 dashboard/forms.py:146
+#: dashboard/forms.py:208 dashboard/forms.py:264 dashboard/forms.py:294
+#: dashboard/forms.py:381 dashboard/forms.py:406 dashboard/forms.py:428
+#: dashboard/templates/manageaboutus.html:71
+#: dashboard/templates/manageclient.html:71
+#: dashboard/templates/managegfx.html:71
+#: dashboard/templates/manageheader.html:63
+#: dashboard/templates/manageimage.html:72
+#: dashboard/templates/managereel.html:153
+#: dashboard/templates/manageserv.html:71 dashboard/templates/managesmm.html:71
+#: dashboard/templates/managevideocase.html:72
+#: dashboard/templates/manageweb.html:71
+msgid "Title"
+msgstr ""
+
+#: dashboard/forms.py:56 dashboard/forms.py:84
+msgid "Short Description"
+msgstr ""
+
+#: dashboard/forms.py:57 dashboard/forms.py:85 dashboard/forms.py:265
+#: dashboard/forms.py:296 dashboard/forms.py:408 dashboard/forms.py:453
+#: dashboard/templates/manageclient.html:73
+#: dashboard/templates/managecontactus.html:74
+#: dashboard/templates/managegfx.html:73
+#: dashboard/templates/manageheader.html:65
+#: dashboard/templates/manageimage.html:73
+#: dashboard/templates/manageweb.html:73
+msgid "Image"
+msgstr ""
+
+#: dashboard/forms.py:58 dashboard/templates/manageheader.html:66
+msgid "Page"
+msgstr ""
+
+#: dashboard/forms.py:59
+msgid "Height (in pixels)"
+msgstr ""
+
+#: dashboard/forms.py:60
+msgid "Top Offset (in pixels)"
+msgstr ""
+
+#: dashboard/forms.py:70 dashboard/forms.py:397
+msgid "Title of Graphic design"
+msgstr ""
+
+#: dashboard/forms.py:72
+msgid "Short description of Graphic design"
+msgstr ""
+
+#: dashboard/forms.py:75
+msgid "Magnification of image. Default = 3, 6 will take a half of row"
+msgstr ""
+
+#: dashboard/forms.py:86 dashboard/forms.py:111 dashboard/forms.py:149
+#: dashboard/forms.py:178 dashboard/forms.py:211 dashboard/forms.py:237
+#: dashboard/forms.py:267 dashboard/forms.py:272 dashboard/forms.py:297
+#: dashboard/forms.py:355 dashboard/forms.py:362 dashboard/forms.py:385
+#: dashboard/forms.py:409 dashboard/forms.py:433
+msgid "Publish"
+msgstr ""
+
+#: dashboard/forms.py:87
+msgid "Magnification"
+msgstr ""
+
+#: dashboard/forms.py:97 dashboard/forms.py:162 dashboard/forms.py:222
+msgid "Title of Video category in Russian"
+msgstr ""
+
+#: dashboard/forms.py:99 dashboard/forms.py:164 dashboard/forms.py:224
+msgid "Title of Video category in English"
+msgstr ""
+
+#: dashboard/forms.py:106 dashboard/forms.py:171 dashboard/forms.py:231
+#: dashboard/forms.py:319 dashboard/templates/manageimgcat.html:60
+#: dashboard/templates/managereelcat.html:60
+#: dashboard/templates/managevideocat.html:60
+msgid "In Russian"
+msgstr ""
+
+#: dashboard/forms.py:107 dashboard/forms.py:172 dashboard/forms.py:232
+#: dashboard/forms.py:320 dashboard/forms.py:492 dashboard/forms.py:515
+#: dashboard/templates/manageimgcat.html:61
+#: dashboard/templates/managereelcat.html:61
+#: dashboard/templates/managesmm.html:72
+#: dashboard/templates/managevideocat.html:61
+msgid "In English"
+msgstr ""
+
+#: dashboard/forms.py:124 dashboard/forms.py:194 dashboard/forms.py:250
+msgid "Title of a Video Case"
+msgstr ""
+
+#: dashboard/forms.py:126
+msgid "Short description of video"
+msgstr ""
+
+#: dashboard/forms.py:128
+msgid "Paste \"embed\" url link, taken from desired youtube clip"
+msgstr ""
+
+#: dashboard/forms.py:136 dashboard/forms.py:150 dashboard/forms.py:201
+#: dashboard/forms.py:210 dashboard/forms.py:257 dashboard/forms.py:266
+#: dashboard/templates/manageimage.html:75
+#: dashboard/templates/managereel.html:156
+#: dashboard/templates/managevideocase.html:76
+msgid "Category"
+msgstr ""
+
+#: dashboard/forms.py:147 dashboard/forms.py:148 dashboard/forms.py:371
+msgid "Short description"
+msgstr ""
+
+#: dashboard/forms.py:152
+msgid "Production date"
+msgstr ""
+
+#: dashboard/forms.py:209
+msgid "Your reel video"
+msgstr ""
+
+#: dashboard/forms.py:285
+msgid "Customer or Company name"
+msgstr ""
+
+#: dashboard/forms.py:287
+msgid "Website address must start from www..."
+msgstr ""
+
+#: dashboard/forms.py:295 dashboard/templates/manageweb.html:72
+msgid "URL"
+msgstr ""
+
+#: dashboard/forms.py:309
+msgid "SMM service in Russian"
+msgstr ""
+
+#: dashboard/forms.py:311
+msgid "SMM service in English"
+msgstr ""
+
+#: dashboard/forms.py:332
+msgid "Before"
+msgstr ""
+
+#: dashboard/forms.py:334
+msgid "Description prior to..."
+msgstr ""
+
+#: dashboard/forms.py:336 dashboard/forms.py:342
+msgid "(Can be blank) Link without https://..."
+msgstr ""
+
+#: dashboard/forms.py:338
+msgid "After"
+msgstr ""
+
+#: dashboard/forms.py:340
+msgid "Description after..."
+msgstr ""
+
+#: dashboard/forms.py:349
+msgid "Title of BEFORE example"
+msgstr ""
+
+#: dashboard/forms.py:350
+msgid "Description of BEFORE example"
+msgstr ""
+
+#: dashboard/forms.py:351
+msgid "URL before"
+msgstr ""
+
+#: dashboard/forms.py:352
+msgid "Title of RESULTS example"
+msgstr ""
+
+#: dashboard/forms.py:353
+msgid "Description of RESULTS example"
+msgstr ""
+
+#: dashboard/forms.py:354
+msgid "URL after"
+msgstr ""
+
+#: dashboard/forms.py:356
+msgid "By default its for russian"
+msgstr ""
+
+#: dashboard/forms.py:369
+msgid "Title of service"
+msgstr ""
+
+#: dashboard/forms.py:373 dashboard/forms.py:383
+msgid "Price"
+msgstr ""
+
+#: dashboard/forms.py:384
+msgid "Currency"
+msgstr ""
+
+#: dashboard/forms.py:386 dashboard/forms.py:432 dashboard/forms.py:454
+#: dashboard/templates/manageaboutus.html:75
+#: dashboard/templates/managecontactus.html:73
+#: dashboard/templates/manageegsmm.html:76
+#: dashboard/templates/manageserv.html:75
+msgid "Language"
+msgstr ""
+
+#: dashboard/forms.py:399
+msgid "website url. omit https://"
+msgstr ""
+
+#: dashboard/forms.py:407
+msgid "Website link"
+msgstr ""
+
+#: dashboard/forms.py:419
+msgid "Title of a post"
+msgstr ""
+
+#: dashboard/forms.py:430
+msgid "Team image"
+msgstr ""
+
+#: dashboard/forms.py:431
+msgid "Second image"
+msgstr ""
+
+#: dashboard/forms.py:443 dashboard/forms.py:451
+#: dashboard/templates/managecontactus.html:71
+msgid "Greeting"
+msgstr ""
+
+#: dashboard/forms.py:469
+msgid "Main video big"
+msgstr ""
+
+#: dashboard/forms.py:470
+msgid "small video 2"
+msgstr ""
+
+#: dashboard/forms.py:471
+msgid "small video 3"
+msgstr ""
+
+#: dashboard/forms.py:480
+msgid "Services we provide"
+msgstr ""
+
+#: dashboard/forms.py:482
+msgid "Services we provide in English"
+msgstr ""
+
+#: dashboard/forms.py:484
+msgid "Services we provide in Korean"
+msgstr ""
+
+#: dashboard/forms.py:491 dashboard/forms.py:514
+#: dashboard/templates/managemain.html:208
+#: dashboard/templates/managemain.html:246
+msgid "Service"
+msgstr ""
+
+#: dashboard/forms.py:493 dashboard/forms.py:516
+msgid "In Korean"
+msgstr ""
+
+#: dashboard/forms.py:503
+msgid "What we achieve"
+msgstr ""
+
+#: dashboard/forms.py:505
+msgid "What we achieve in English"
+msgstr ""
+
+#: dashboard/forms.py:507
+msgid "What we achieve in Korean"
+msgstr ""
+
+#: dashboard/templates/dashboard.html:17
+#: dashboard/templates/manageaboutus.html:62
+#: dashboard/templates/manageclient.html:62
+#: dashboard/templates/managecontactus.html:62
+#: dashboard/templates/manageegsmm.html:62
+#: dashboard/templates/managegfx.html:62
+#: dashboard/templates/manageheader.html:55
+#: dashboard/templates/manageimage.html:63
+#: dashboard/templates/manageimgcat.html:52
+#: dashboard/templates/managemain.html:151
+#: dashboard/templates/managemain.html:200
+#: dashboard/templates/managemain.html:238
+#: dashboard/templates/managereel.html:144
+#: dashboard/templates/managereelcat.html:52
+#: dashboard/templates/managereview.html:62
+#: dashboard/templates/manageserv.html:62 dashboard/templates/managesmm.html:62
+#: dashboard/templates/managevideocase.html:63
+#: dashboard/templates/managevideocat.html:52
+#: dashboard/templates/manageweb.html:62
+msgid "All publications:"
+msgstr ""
+
+#: dashboard/templates/dashboard.html:18
+msgid "Order list:"
+msgstr ""
+
+#: dashboard/templates/dashboard.html:25
+msgid "Order date"
+msgstr ""
+
+#: dashboard/templates/dashboard.html:26
+msgid "Name"
+msgstr ""
+
+#: dashboard/templates/dashboard.html:27
+msgid "Phone"
+msgstr ""
+
+#: dashboard/templates/dashboard.html:28
+msgid "email"
+msgstr ""
+
+#: dashboard/templates/dashboard.html:29 dashboard/templates/dashboard.html:46
+msgid "Details"
+msgstr ""
+
+#: dashboard/templates/dashboard.html:30
+msgid "Status"
+msgstr ""
+
+#: dashboard/templates/dashboard.html:31
+#: dashboard/templates/manageaboutus.html:77
+#: dashboard/templates/manageclient.html:75
+#: dashboard/templates/managecontactus.html:75
+#: dashboard/templates/manageegsmm.html:77
+#: dashboard/templates/managegfx.html:75
+#: dashboard/templates/manageheader.html:69
+#: dashboard/templates/manageimage.html:76
+#: dashboard/templates/manageimgcat.html:62
+#: dashboard/templates/managemain.html:162
+#: dashboard/templates/managemain.html:209
+#: dashboard/templates/managemain.html:247
+#: dashboard/templates/managereel.html:157
+#: dashboard/templates/managereelcat.html:62
+#: dashboard/templates/managereview.html:75
+#: dashboard/templates/manageserv.html:76 dashboard/templates/managesmm.html:73
+#: dashboard/templates/managevideocase.html:78
+#: dashboard/templates/managevideocat.html:62
+#: dashboard/templates/manageweb.html:75
+msgid "Action"
+msgstr ""
+
+#: dashboard/templates/dashboard.html:48 dashboard/templates/dashboard.html:52
+msgid "Order Details"
+msgstr ""
+
+#: dashboard/templates/dashboard.html:58
+msgid "Accept"
+msgstr ""
+
+#: dashboard/templates/dashboard.html:60
+msgid "Finish"
+msgstr ""
+
+#: dashboard/templates/dashboard.html:62
+msgid "Done"
+msgstr ""
+
+#: dashboard/templates/edit_o.html:35
+msgid "Edit order"
+msgstr ""
+
+#: dashboard/templates/edit_o.html:40 dashboard/templates/new_au.html:40
+#: dashboard/templates/new_cl.html:40 dashboard/templates/new_ct.html:40
+#: dashboard/templates/new_es.html:40 dashboard/templates/new_g.html:40
+#: dashboard/templates/new_he.html:41 dashboard/templates/new_i.html:40
+#: dashboard/templates/new_icat.html:26 dashboard/templates/new_main.html:40
+#: dashboard/templates/new_rcat.html:42 dashboard/templates/new_reel.html:42
+#: dashboard/templates/new_s.html:41 dashboard/templates/new_serv.html:41
+#: dashboard/templates/new_vc.html:39 dashboard/templates/new_vcat.html:41
+#: dashboard/templates/new_w.html:40
+msgid "Save"
+msgstr ""
+
+#: dashboard/templates/manageaboutus.html:47
+msgid "About us post"
+msgstr ""
+
+#: dashboard/templates/manageaboutus.html:63
+#: dashboard/templates/manageclient.html:63
+#: dashboard/templates/managecontactus.html:63
+#: dashboard/templates/manageegsmm.html:63
+#: dashboard/templates/managegfx.html:63
+#: dashboard/templates/manageheader.html:56
+#: dashboard/templates/manageimage.html:64
+#: dashboard/templates/manageimgcat.html:53
+#: dashboard/templates/managereel.html:145
+#: dashboard/templates/managereelcat.html:53
+#: dashboard/templates/managereview.html:63
+#: dashboard/templates/manageserv.html:63 dashboard/templates/managesmm.html:63
+#: dashboard/templates/managevideocase.html:64
+#: dashboard/templates/managevideocat.html:53
+#: dashboard/templates/manageweb.html:63
+msgid "All data:"
+msgstr ""
+
+#: dashboard/templates/manageaboutus.html:70
+#: dashboard/templates/manageclient.html:70
+#: dashboard/templates/manageegsmm.html:70
+#: dashboard/templates/managegfx.html:70
+#: dashboard/templates/manageimage.html:71
+#: dashboard/templates/managereel.html:152
+#: dashboard/templates/managereview.html:70
+#: dashboard/templates/manageserv.html:70 dashboard/templates/managesmm.html:70
+#: dashboard/templates/managevideocase.html:71
+#: dashboard/templates/manageweb.html:70
+msgid "Upload date"
+msgstr ""
+
+#: dashboard/templates/manageaboutus.html:73
+msgid "Team"
+msgstr ""
+
+#: dashboard/templates/manageaboutus.html:74
+msgid "Studio"
+msgstr ""
+
+#: dashboard/templates/manageaboutus.html:76
+#: dashboard/templates/manageclient.html:74
+#: dashboard/templates/manageegsmm.html:75
+#: dashboard/templates/managegfx.html:74
+#: dashboard/templates/manageimage.html:74
+#: dashboard/templates/managereel.html:155
+#: dashboard/templates/manageserv.html:74
+#: dashboard/templates/managevideocase.html:75
+#: dashboard/templates/manageweb.html:74
+msgid "Published"
+msgstr ""
+
+#: dashboard/templates/manageaboutus.html:92
+#: dashboard/templates/manageclient.html:88
+#: dashboard/templates/managecontactus.html:89
+#: dashboard/templates/manageegsmm.html:92
+#: dashboard/templates/managegfx.html:88
+#: dashboard/templates/manageheader.html:83
+#: dashboard/templates/manageimage.html:89
+#: dashboard/templates/manageimgcat.html:72
+#: dashboard/templates/managemain.html:179
+#: dashboard/templates/managemain.html:218
+#: dashboard/templates/managemain.html:256
+#: dashboard/templates/managereel.html:172
+#: dashboard/templates/managereelcat.html:72
+#: dashboard/templates/manageserv.html:90 dashboard/templates/managesmm.html:85
+#: dashboard/templates/managevideocase.html:93
+#: dashboard/templates/managevideocat.html:72
+#: dashboard/templates/manageweb.html:88
+msgid "Edit"
+msgstr ""
+
+#: dashboard/templates/manageaboutus.html:93
+#: dashboard/templates/manageclient.html:89
+#: dashboard/templates/managecontactus.html:90
+#: dashboard/templates/manageegsmm.html:93
+#: dashboard/templates/managegfx.html:89
+#: dashboard/templates/manageheader.html:84
+#: dashboard/templates/manageimage.html:90
+#: dashboard/templates/manageimgcat.html:73
+#: dashboard/templates/managemain.html:180
+#: dashboard/templates/managemain.html:219
+#: dashboard/templates/managemain.html:257
+#: dashboard/templates/managereel.html:173
+#: dashboard/templates/managereelcat.html:73
+#: dashboard/templates/managereview.html:99
+#: dashboard/templates/manageserv.html:91 dashboard/templates/managesmm.html:86
+#: dashboard/templates/managevideocase.html:94
+#: dashboard/templates/managevideocat.html:73
+#: dashboard/templates/manageweb.html:89
+msgid "Delete"
+msgstr ""
+
+#: dashboard/templates/manageclient.html:47 dashboard/templates/new_cl.html:35
+msgid "Add new client"
+msgstr ""
+
+#: dashboard/templates/manageclient.html:48
+msgid "Add client"
+msgstr ""
+
+#: dashboard/templates/manageclient.html:72
+msgid "url"
+msgstr ""
+
+#: dashboard/templates/managecontactus.html:47
+msgid "Contact us page content"
+msgstr ""
+
+#: dashboard/templates/managecontactus.html:48
+msgid "New page content"
+msgstr ""
+
+#: dashboard/templates/managecontactus.html:70
+msgid "Date"
+msgstr ""
+
+#: dashboard/templates/manageegsmm.html:47
+msgid "Upload new example"
+msgstr ""
+
+#: dashboard/templates/manageegsmm.html:48
+#: dashboard/templates/managegfx.html:48
+#: dashboard/templates/manageimage.html:48
+#: dashboard/templates/managesmm.html:48
+msgid "Upload image"
+msgstr ""
+
+#: dashboard/templates/manageegsmm.html:71
+msgid "Title Before"
+msgstr ""
+
+#: dashboard/templates/manageegsmm.html:72
+msgid "TItle After"
+msgstr ""
+
+#: dashboard/templates/manageegsmm.html:73
+msgid "Image Before"
+msgstr ""
+
+#: dashboard/templates/manageegsmm.html:74
+msgid "Image After"
+msgstr ""
+
+#: dashboard/templates/managegfx.html:47
+#: dashboard/templates/manageimage.html:47
+msgid "Upload images"
+msgstr ""
+
+#: dashboard/templates/managegfx.html:72
+#: dashboard/templates/manageheader.html:64
+#: dashboard/templates/managevideocase.html:73
+msgid "Short"
+msgstr ""
+
+#: dashboard/templates/manageheader.html:37 dashboard/templates/new_he.html:36
+msgid "Create new header entry"
+msgstr ""
+
+#: dashboard/templates/manageheader.html:67
+msgid "Height"
+msgstr ""
+
+#: dashboard/templates/manageheader.html:68
+msgid "Top"
+msgstr ""
+
+#: dashboard/templates/manageimage.html:49
+msgid "Create new photography category"
+msgstr ""
+
+#: dashboard/templates/manageimgcat.html:37
+#: dashboard/templates/new_icat.html:21
+msgid "Create new Photography category"
+msgstr ""
+
+#: dashboard/templates/managemain.html:128
+msgid "Upload promo videos"
+msgstr ""
+
+#: dashboard/templates/managemain.html:129
+msgid "Upload videos"
+msgstr ""
+
+#: dashboard/templates/managemain.html:132
+msgid "List of Our services"
+msgstr ""
+
+#: dashboard/templates/managemain.html:133
+#: dashboard/templates/manageserv.html:47
+#: dashboard/templates/manageserv.html:48
+msgid "Add service"
+msgstr ""
+
+#: dashboard/templates/managemain.html:136
+msgid "What we accomplish"
+msgstr ""
+
+#: dashboard/templates/managemain.html:137
+msgid "Add accomplishment"
+msgstr ""
+
+#: dashboard/templates/managemain.html:152
+msgid "Promotional video table:"
+msgstr ""
+
+#: dashboard/templates/managemain.html:159
+msgid "Main video"
+msgstr ""
+
+#: dashboard/templates/managemain.html:160
+msgid "2nd video"
+msgstr ""
+
+#: dashboard/templates/managemain.html:161
+msgid "3rd video"
+msgstr ""
+
+#: dashboard/templates/managereel.html:128
+msgid "Upload Reel"
+msgstr ""
+
+#: dashboard/templates/managereel.html:129
+msgid "Upload new reel"
+msgstr ""
+
+#: dashboard/templates/managereel.html:130
+msgid "Create new reel category"
+msgstr ""
+
+#: dashboard/templates/managereel.html:154
+msgid "video"
+msgstr ""
+
+#: dashboard/templates/managereelcat.html:37
+#: dashboard/templates/new_rcat.html:37
+msgid "Create new Reel category"
+msgstr ""
+
+#: dashboard/templates/managereview.html:47
+msgid "Manage reviews"
+msgstr ""
+
+#: dashboard/templates/managereview.html:71
+msgid "name"
+msgstr ""
+
+#: dashboard/templates/managereview.html:72
+msgid "role"
+msgstr ""
+
+#: dashboard/templates/managereview.html:73
+msgid "company"
+msgstr ""
+
+#: dashboard/templates/managereview.html:74
+msgid "content"
+msgstr ""
+
+#: dashboard/templates/managereview.html:96
+msgid "No review content"
+msgstr ""
+
+#: dashboard/templates/managereview.html:107
+msgid ""
+"Just in case, here is a link to provide for reviews: http://www."
+"kamiproduction.com/write_review"
+msgstr ""
+
+#: dashboard/templates/manageserv.html:73
+msgid "price"
+msgstr ""
+
+#: dashboard/templates/managesmm.html:47
+msgid "Create new SMM post"
+msgstr ""
+
+#: dashboard/templates/managevideocase.html:47
+msgid "New Video Case from Youtube"
+msgstr ""
+
+#: dashboard/templates/managevideocase.html:48
+msgid "Add Video case"
+msgstr ""
+
+#: dashboard/templates/managevideocase.html:49
+msgid "New video category"
+msgstr ""
+
+#: dashboard/templates/managevideocase.html:74
+msgid "Youtube"
+msgstr ""
+
+#: dashboard/templates/managevideocase.html:77
+msgid "Produced"
+msgstr ""
+
+#: dashboard/templates/managevideocat.html:37
+#: dashboard/templates/new_vcat.html:36
+msgid "Create new Video category"
+msgstr ""
+
+#: dashboard/templates/manageweb.html:47
+msgid "Upload Web design"
+msgstr ""
+
+#: dashboard/templates/manageweb.html:48
+msgid "Upload web design"
+msgstr ""
+
+#: dashboard/templates/new_au.html:35
+msgid "Create aboutus post"
+msgstr ""
+
+#: dashboard/templates/new_cl.html:43
+msgid ""
+"Please note: Ideal image must be transparent, height must be same for all "
+"logos, so if decided to have 80px then height for all logos must be 80px. "
+"And format must be either .png or .gif"
+msgstr ""
+
+#: dashboard/templates/new_ct.html:35
+msgid "Add contact us content"
+msgstr ""
+
+#: dashboard/templates/new_es.html:35
+msgid "create SMM example"
+msgstr ""
+
+#: dashboard/templates/new_g.html:35 dashboard/templates/new_i.html:35
+msgid "Add a new Image"
+msgstr ""
+
+#: dashboard/templates/new_main.html:35
+msgid "Main page"
+msgstr ""
+
+#: dashboard/templates/new_reel.html:37
+msgid "Upload reel"
+msgstr ""
+
+#: dashboard/templates/new_s.html:36
+msgid "create SMM content"
+msgstr ""
+
+#: dashboard/templates/new_serv.html:36
+msgid "Create Service"
+msgstr ""
+
+#: dashboard/templates/new_vc.html:34
+msgid "Add Video case from youtube"
+msgstr ""
+
+#: dashboard/templates/new_w.html:35
+msgid "Add a new Web design"
+msgstr ""
+
+#: dashboard/views.py:47
+msgid "Successfully changed."
+msgstr ""
+
+#: dashboard/views.py:50 dashboard/views.py:84 dashboard/views.py:127
+#: dashboard/views.py:154 dashboard/views.py:197 dashboard/views.py:238
+#: dashboard/views.py:257 dashboard/views.py:293 dashboard/views.py:320
+#: dashboard/views.py:351 dashboard/views.py:386 dashboard/views.py:406
+#: dashboard/views.py:442 dashboard/views.py:470 dashboard/views.py:501
+#: dashboard/views.py:536 dashboard/views.py:555 dashboard/views.py:591
+#: dashboard/views.py:625 dashboard/views.py:662 dashboard/views.py:690
+#: dashboard/views.py:721 dashboard/views.py:748 dashboard/views.py:780
+#: dashboard/views.py:807 dashboard/views.py:838 dashboard/views.py:866
+#: dashboard/views.py:900 dashboard/views.py:934 dashboard/views.py:971
+#: dashboard/views.py:1005 dashboard/views.py:1036 dashboard/views.py:1079
+#: dashboard/views.py:1116 dashboard/views.py:1160 dashboard/views.py:1178
+#: dashboard/views.py:1196 dashboard/views.py:1227 dashboard/views.py:1246
+#: dashboard/views.py:1265
+msgid "Not validated."
+msgstr ""
+
+#: dashboard/views.py:72
+msgid "Header entry data has been permanently deleted."
+msgstr ""
+
+#: dashboard/views.py:81 dashboard/views.py:124 dashboard/views.py:151
+#: dashboard/views.py:194 dashboard/views.py:235 dashboard/views.py:254
+#: dashboard/views.py:290 dashboard/views.py:317 dashboard/views.py:348
+#: dashboard/views.py:383 dashboard/views.py:403 dashboard/views.py:439
+#: dashboard/views.py:467 dashboard/views.py:498 dashboard/views.py:533
+#: dashboard/views.py:552 dashboard/views.py:588 dashboard/views.py:622
+#: dashboard/views.py:659 dashboard/views.py:687 dashboard/views.py:718
+#: dashboard/views.py:745 dashboard/views.py:777 dashboard/views.py:804
+#: dashboard/views.py:835 dashboard/views.py:863 dashboard/views.py:897
+#: dashboard/views.py:931 dashboard/views.py:968 dashboard/views.py:1002
+#: dashboard/views.py:1033 dashboard/views.py:1076 dashboard/views.py:1113
+#: dashboard/views.py:1157 dashboard/views.py:1175 dashboard/views.py:1193
+#: dashboard/views.py:1224 dashboard/views.py:1243 dashboard/views.py:1262
+msgid "Successfully saved."
+msgstr ""
+
+#: dashboard/views.py:141
+msgid "Video category has been permanently deleted."
+msgstr ""
+
+#: dashboard/views.py:212
+msgid "Video data has been permanently deleted."
+msgstr ""
+
+#: dashboard/views.py:307
+msgid "Reel category has been permanently deleted."
+msgstr ""
+
+#: dashboard/views.py:366
+msgid "Reel has been permanently deleted."
+msgstr ""
+
+#: dashboard/views.py:457
+msgid "Image category has been permanently deleted."
+msgstr ""
+
+#: dashboard/views.py:516
+msgid "Image data has been permanently deleted."
+msgstr ""
+
+#: dashboard/views.py:605
+msgid "Graphic design Image data has been permanently deleted."
+msgstr ""
+
+#: dashboard/views.py:677
+msgid "Web design data has been permanently deleted."
+msgstr ""
+
+#: dashboard/views.py:735
+msgid "SMM data has been permanently deleted."
+msgstr ""
+
+#: dashboard/views.py:794
+msgid "SMM example has been permanently deleted."
+msgstr ""
+
+#: dashboard/views.py:852
+msgid "Service has been permanently deleted."
+msgstr ""
+
+#: dashboard/views.py:914
+msgid "Client data has been permanently deleted."
+msgstr ""
+
+#: dashboard/views.py:985
+msgid "Aboutus post has been permanently deleted."
+msgstr ""
+
+#: dashboard/views.py:1050
+msgid "Review has been permanently deleted."
+msgstr ""
+
+#: dashboard/views.py:1067
+msgid "Contacts page has been permanently deleted."
+msgstr ""
+
+#: dashboard/views.py:1132
+msgid "Promo videos set has been permanently deleted."
+msgstr ""
+
+#: dashboard/views.py:1140
+msgid "Our service has been permanently deleted."
+msgstr ""
+
+#: dashboard/views.py:1148
+msgid "Entry has been permanently deleted."
+msgstr ""
+
+#: orders/forms.py:14 orders/forms.py:38 orders/forms.py:72
+msgid "Leave us your name"
+msgstr ""
+
+#: orders/forms.py:16 orders/forms.py:40
+msgid "Your email to contact you"
+msgstr ""
+
+#: orders/forms.py:18 orders/forms.py:42
+msgid "Your phone number"
+msgstr ""
+
+#: orders/forms.py:25 orders/forms.py:55 orders/forms.py:85
+msgid "Full Name"
+msgstr ""
+
+#: orders/forms.py:26 orders/forms.py:56
+msgid "Phone Number"
+msgstr ""
+
+#: orders/forms.py:27 orders/forms.py:57
+msgid "Email Address"
+msgstr ""
+
+#: orders/forms.py:44
+msgid "What service are you interested in?"
+msgstr ""
+
+#: orders/forms.py:46
+msgid "What time is convenient for you to receive a call?"
+msgstr ""
+
+#: orders/forms.py:48
+msgid "Any questions? Or anything you would like to add?"
+msgstr ""
+
+#: orders/forms.py:58
+msgid "Q1"
+msgstr ""
+
+#: orders/forms.py:59
+msgid "Q2"
+msgstr ""
+
+#: orders/forms.py:60
+msgid "Note"
+msgstr ""
+
+#: orders/forms.py:74
+msgid "Your role or position"
+msgstr ""
+
+#: orders/forms.py:76
+msgid "Your workplace"
+msgstr ""
+
+#: orders/forms.py:78
+msgid "Your review"
+msgstr ""
+
+#: orders/forms.py:86
+msgid "Role or position"
+msgstr ""
+
+#: orders/forms.py:87
+msgid "Company name"
+msgstr ""
+
+#: orders/forms.py:88
+msgid "Review"
+msgstr ""
+
+#: orders/forms.py:89
+msgid "Rank us from 1 (bad) to 5 (Excellent)"
+msgstr ""
+
+#: orders/templates/error.html:142
+msgid "Failed"
+msgstr ""
+
+#: orders/templates/error.html:143
+msgid "Try again later or contact us<br/> and we will get back to you shortly!"
+msgstr ""
+
+#: orders/templates/order.html:141
+msgid ""
+"Please be aware that the prices provided are estimates. The final price will "
+"be determined once all conditions are finalized with you. Additionally, "
+"please note that this application does not constitute a payment. It is "
+"merely a reservation request. Kindly complete the required fields, and we "
+"will get in touch with you shortly."
+msgstr ""
+
+#: orders/templates/order.html:145
+msgid "You have chosen:"
+msgstr ""
+
+#: orders/templates/success.html:144
+msgid "Success"
+msgstr ""
+
+#: orders/templates/success.html:145
+msgid "We received your request;<br/> we'll be in touch shortly!"
+msgstr ""
+
+#: orders/templates/write.html:142
+msgid "We Value Your Feedback!"
+msgstr ""
+
+#: orders/templates/write.html:144
+msgid ""
+"Thank you for choosing us! Your experience with us is important, and we’d "
+"love to hear your thoughts.<br><br>Please take a moment to leave a review "
+"and let us know how we did. Your feedback helps us improve and continue "
+"providing the best service possible."
+msgstr ""
+
+#: templates/base.html:102
+msgid "Main"
+msgstr ""
+
+#: templates/base.html:103
+msgid "Portfolio"
+msgstr ""
+
+#: templates/base.html:105
+msgid "Video Cases"
+msgstr ""
+
+#: templates/base.html:106
+msgid "Reels"
+msgstr ""
+
+#: templates/base.html:108
+msgid "Websites"
+msgstr ""
+
+#: templates/base.html:109
+msgid "Graphic design"
+msgstr ""
+
+#: templates/base.html:112
+msgid "SMM Promotion"
+msgstr ""
+
+#: templates/base.html:113
+msgid "Our services"
+msgstr ""
+
+#: templates/base.html:114
+msgid "Customer reviews"
+msgstr ""
+
+#: templates/base.html:115
+msgid "Our Clients"
+msgstr ""
+
+#: templates/base.html:116
+msgid "About studio"
+msgstr ""
+
+#: templates/base.html:117
+msgid "Contact"
+msgstr ""
+
+#: templates/base.html:164
+msgid "About Us"
+msgstr ""
+
+#: templates/base.html:166
+msgid ""
+"At our creative studio, we weave together the art of storytelling through "
+"dynamic video production, captivating social media strategies, cutting-edge "
+"web development, and striking graphic design, crafting digital experiences "
+"that resonate and inspire."
+msgstr ""
+
+#: templates/base.html:178
+msgid "Our address:"
+msgstr ""
+
+#: templates/base.html:188
+msgid "Follow Us"
+msgstr ""
+
+#: templates/base.html:189
+msgid "Let us be social"
+msgstr ""
+
+#: users/managers.py:12
+msgid "The Email must be set"
+msgstr ""
+
+#: users/managers.py:28
+msgid "Superuser must have is_staff=True."
+msgstr ""
+
+#: users/managers.py:30
+msgid "Superuser must have is_superuser=True."
+msgstr ""
+
+#: users/templates/login2.html:9
+msgid "Sign In"
+msgstr ""
+
+#: users/templates/login2.html:13
+msgid "Login"
+msgstr ""
+
+#: users/templates/login2.html:15
+msgid "Don't have an account? "
+msgstr ""
+
+#: users/templates/login2.html:15
+msgid "Create an account"
+msgstr ""
+
+#: users/templates/register.html:35 users/templates/register2.html:9
+#: users/templates/register2.html:13
+msgid "Register"
+msgstr ""
+
+#: users/templates/register2.html:15
+msgid "If you already have an account, <a href=\"/login\">login</a> instead."
+msgstr ""
+
+#: users/views.py:31
+msgid "You are now logged in as {}."
+msgstr ""
+
+#: users/views.py:34 users/views.py:36
+msgid "Invalid username or password."
+msgstr ""
+
+#: users/views.py:42
+msgid "You have successfully logged out."
+msgstr ""
+
+#: users/views.py:51
+msgid "Registration successful."
+msgstr ""
+
+#: users/views.py:53
+msgid "Unsuccessful registration. Invalid information."
+msgstr ""

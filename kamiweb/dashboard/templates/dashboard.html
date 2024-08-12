@@ -1,0 +1,258 @@
+{% extends "base-admin.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block head_js %}
+
+{% endblock %}
+
+{% block app_content %}
+{% load crispy_forms_tags %}  
+
+<div class="py-vh-6 bg-gray-300 text-light w-100 overflow-hidden" id="workwithus">
+  <div class="container">
+	<div class="row d-flex justify-content-center">
+	  <div class="row d-flex justify-content-center text-center">
+		<div class="col-lg-12 text-center" data-aos="fade">
+		  <!--<p class="text-secondary lead">{% translate "All publications:" %}</p>-->
+		  <h2 class="display-6 mb-5">{% translate "Order list:" %}</h2>
+		</div>
+		<div class="col-12">
+		  <table class="table table-responsive text-nowrap" style="" id="filterservice">
+			<thead>
+				<tr class="table-dark">
+				  <th scope="col">#</th>
+				  <th scope="col">{% translate "Order date" %}</th>
+				  <th scope="col">{% translate "Name" %}</th>
+				  <th scope="col">{% translate "Phone" %}</th>
+				  <th scope="col">{% translate "email" %}</th>
+				  <th scope="col">{% translate "Details" %}</th>
+				  <th scope="col">{% translate "Status" %}</th>
+				  <th scope="col">{% translate "Action" %}</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for s in orders %}
+				<tr class="table-dark">
+				  
+				   <th scope="row">{{ s.id }}</th>
+				  <td>{{ s.created_on }}</td>
+				  <td>{{ s.name }}</td>
+				  <td>{{ s.phone }}</td>
+				  <td>{{ s.email }}</td>
+				  <td>{% if s.note %}<button type="button" class="btn btn-secondary"
+							data-bs-toggle="popover" data-bs-placement="bottom" data-bs-trigger="focus"
+							data-bs-custom-class="custom-popover"
+							data-bs-title="{% translate 'Details' %}"
+							data-bs-content="{{ s.note }}">
+					  {% translate "Order Details" %}
+					</button>
+					{% else %}
+					<span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Disabled popover">
+					  <button class="btn btn-primary" type="button" disabled>{% translate "Order Details" %}</button>
+					</span>
+						{% endif %}
+					</td>
+				  <td>{% if s.status == 0 %}{% translate "Applied" %}{% elif s.status == 1 %}{% translate "Processing" %}{% elif s.status == 2 %}{% translate "Closed" %}{% endif %}</td>
+				  <td>{% if s.status == 0 %}
+						<a class="btn btn-success btn-sm" href="{% url 'order_pr' ordid=s.id s=1 %}" role="button">{% translate "Accept" %}</a>
+						{% elif s.status == 1 %}
+						<a class="btn btn-success btn-sm" href="{% url 'order_pr' ordid=s.id s=2 %}" role="button">{% translate "Finish" %}</a>
+						{% elif s.status == 2 %}
+						{% translate "Done" %}
+						{% endif %}
+				  
+				  
+				  
+				  </td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		  </table>
+		</div>
+	  </div>
+
+	</div>
+  </div>
+</div>
+
+<!-- Pagination controls -->
+        <div class="d-flex justify-content-center">
+          <nav aria-label="Page navigation">
+            <ul class="pagination">
+              {% if orders.has_previous %}
+                <li class="page-item">
+                  <a class="page-link" href="?orders_page=1" aria-label="First">
+                    <span aria-hidden="true">&laquo;&laquo;</span>
+                  </a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="?orders_page={{ orders.previous_page_number }}" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                  </a>
+                </li>
+              {% else %}
+                <li class="page-item disabled">
+                  <span class="page-link">&laquo;&laquo;</span>
+                </li>
+                <li class="page-item disabled">
+                  <span class="page-link">&laquo;</span>
+                </li>
+              {% endif %}
+
+              {% for i in orders.paginator.page_range %}
+                {% if orders.number == i %}
+                  <li class="page-item active"><span class="page-link">{{ i }}</span></li>
+                {% else %}
+                  <li class="page-item"><a class="page-link" href="?orders_page={{ i }}">{{ i }}</a></li>
+                {% endif %}
+              {% endfor %}
+
+              {% if orders.has_next %}
+                <li class="page-item">
+                  <a class="page-link" href="?orders_page={{ orders.next_page_number }}" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                  </a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="?orders_page={{ orders.paginator.num_pages }}" aria-label="Last">
+                    <span aria-hidden="true">&raquo;&raquo;</span>
+                  </a>
+                </li>
+              {% else %}
+                <li class="page-item disabled">
+                  <span class="page-link">&raquo;</span>
+                </li>
+                <li class="page-item disabled">
+                  <span class="page-link">&raquo;&raquo;</span>
+                </li>
+              {% endif %}
+            </ul>
+          </nav>
+        </div>
+
+
+
+<div class="py-vh-6 bg-gray-300 text-light w-100 overflow-hidden" id="workwithus">
+  <div class="container">
+	<div class="row d-flex justify-content-center">
+	  <div class="row d-flex justify-content-center text-center">
+		<div class="col-lg-12 text-center" data-aos="fade">
+		  <!--<p class="text-secondary lead">{% translate "All publications:" %}</p>-->
+		  <h2 class="display-6 mb-5">{% translate "Order list:" %}</h2>
+		</div>
+		<div class="col-12">
+		  <table class="table table-responsive text-nowrap" style="" id="filterservice">
+			<thead>
+				<tr class="table-dark">
+				  <th scope="col">#</th>
+				  <th scope="col">{% translate "Order date" %}</th>
+				  <th scope="col">{% translate "Name" %}</th>
+				  <th scope="col">{% translate "Phone" %}</th>
+				  <th scope="col">{% translate "email" %}</th>
+				  <th scope="col">{% translate "Details" %}</th>
+				  <th scope="col">{% translate "Status" %}</th>
+				  <th scope="col">{% translate "Action" %}</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for s in calls %}
+				<tr class="table-dark">
+				  
+				   <th scope="row">{{ s.id }}</th>
+				  <td>{{ s.created_on }}</td>
+				  <td>{{ s.name }}</td>
+				  <td>{{ s.phone }}</td>
+				  <td>{{ s.email }}</td>
+				  <td>{% if s.note %}<button type="button" class="btn btn-secondary"
+							data-bs-toggle="popover" data-bs-placement="bottom" data-bs-trigger="focus"
+							data-bs-custom-class="custom-popover"
+							data-bs-title="{% translate 'Details' %}"
+							data-bs-content="Q1:{{s.question1}} || Q2:{{s.question2}} || Note:{{ s.note }}">
+					  {% translate "Request Details" %}
+					</button>
+					{% else %}
+					<span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Disabled popover">
+					  <button class="btn btn-primary" type="button" disabled>{% translate "Request Details" %}</button>
+					</span>
+						{% endif %}
+					</td>
+				  <td>{% if s.status == 0 %}{% translate "Applied" %}{% elif s.status == 1 %}{% translate "Processing" %}{% elif s.status == 2 %}{% translate "Closed" %}{% endif %}</td>
+				  <td>{% if s.status == 0 %}
+						<a class="btn btn-success btn-sm" href="{% url 'call_pr' ordid=s.id s=1 %}" role="button">{% translate "Accept" %}</a>
+						{% elif s.status == 1 %}
+						<a class="btn btn-success btn-sm" href="{% url 'call_pr' ordid=s.id s=2 %}" role="button">{% translate "Finish" %}</a>
+						{% elif s.status == 2 %}
+						{% translate "Done" %}
+						{% endif %}
+				  
+				  
+				  
+				  </td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		  </table>
+		</div>
+	  </div>
+
+	</div>
+  </div>
+</div>
+
+<!-- Pagination controls -->
+        <div class="d-flex justify-content-center">
+          <nav aria-label="Page navigation">
+            <ul class="pagination">
+              {% if calls.has_previous %}
+                <li class="page-item">
+                  <a class="page-link" href="?calls_page=1" aria-label="First">
+                    <span aria-hidden="true">&laquo;&laquo;</span>
+                  </a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="?calls_page={{ calls.previous_page_number }}" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                  </a>
+                </li>
+              {% else %}
+                <li class="page-item disabled">
+                  <span class="page-link">&laquo;&laquo;</span>
+                </li>
+                <li class="page-item disabled">
+                  <span class="page-link">&laquo;</span>
+                </li>
+              {% endif %}
+
+              {% for i in calls.paginator.page_range %}
+                {% if calls.number == i %}
+                  <li class="page-item active"><span class="page-link">{{ i }}</span></li>
+                {% else %}
+                  <li class="page-item"><a class="page-link" href="?calls_page={{ i }}">{{ i }}</a></li>
+                {% endif %}
+              {% endfor %}
+
+              {% if calls.has_next %}
+                <li class="page-item">
+                  <a class="page-link" href="?calls_page={{ calls.next_page_number }}" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                  </a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="?calls_page={{ calls.paginator.num_pages }}" aria-label="Last">
+                    <span aria-hidden="true">&raquo;&raquo;</span>
+                  </a>
+                </li>
+              {% else %}
+                <li class="page-item disabled">
+                  <span class="page-link">&raquo;</span>
+                </li>
+                <li class="page-item disabled">
+                  <span class="page-link">&raquo;&raquo;</span>
+                </li>
+              {% endif %}
+            </ul>
+          </nav>
+        </div>
+
+{% endblock %}

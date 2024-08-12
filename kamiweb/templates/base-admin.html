@@ -39,8 +39,38 @@
 				html,body {
 				  height: 100%;
 				}
+				.navbar-toggler {
+            border: none;
+        }
+        .custom-popover {
+            --bs-popover-max-width: 200px;
+            --bs-popover-border-color: var(--bd-violet-bg);
+            --bs-popover-header-bg: var(--bd-violet-bg);
+            --bs-popover-header-color: var(--bs-black);
+            --bs-popover-body-padding-x: 1rem;
+            --bs-popover-body-padding-y: .5rem;
+        }
+        @media (min-width: 768px) {
+            #sidebar {
+                display: block !important;
+            }
+        }
+        @media (max-width: 767px) {
+            #sidebar {
+                display: none;
+            }
+        }
 			  </style>
-		
+			<style>
+			.custom-popover {
+			  --bs-popover-max-width: 200px;
+			  --bs-popover-border-color: var(--bd-violet-bg);
+			  --bs-popover-header-bg: var(--bd-violet-bg);
+			  --bs-popover-header-color: var(--bs-black);
+			  --bs-popover-body-padding-x: 1rem;
+			  --bs-popover-body-padding-y: .5rem;
+			}
+			</style>
 		</head>
 		<body>	
 		{% if messages %}
@@ -54,12 +84,11 @@
 		</ul>
 	{% endif %}
 
-	
-<div class="container-flush h-100">
-	<div class="row">
+<div class="container-fluid">
+    <div class="row">
 		<div class="col-12">
 			<nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
-			  <div class="container-fluid">
+
 				<a href="{% url 'dashboard' %}"><img src="{% static 'img/logo.png' %}" alt="" title="" /></a>
 				<form class="d-flex" action="{% url 'set_language' %}" method="post">
 										  {% csrf_token %}
@@ -76,35 +105,128 @@
 											{% endfor %}
 										  </select>
 										</form>
-			  </div>
+
 			</nav>
 		</div>
 	</div>
-	
-	<div class="row justify-content-center h-100">
-		<div class="col-2 h-100">	
-			<nav class="nav flex-column bg-dark h-100" data-bs-theme="dark" style="height: 100%;">
-			  <a class="nav-link active" aria-current="page" href="manageheader">Manage Header</a>
-			  <a class="nav-link" href="managevideocat">Manage Video Category</a>
-			  <a class="nav-link" href="managevideocase">Manage Video Cases</a>
-			  <a class="nav-link" href="managereelcat">Manage Reel Category</a>
-			  <a class="nav-link" href="managereel">Manage Reels</a>
-			  <a class="nav-link" href="manageimgcat">Manage Image Category</a>
-			  <a class="nav-link" href="manageimage">Manage Images</a>
-			  <a class="nav-link" href="managegfx">Manage Graphic design Images</a>
-			  <a class="nav-link" href="manageweb">Manage Website designs</a>
-			  <a class="nav-link disabled">Disabled</a>
-			</nav>	
-		</div>
-		<div class="col-11 col-sm-11 col-md-11 col-lg-10 col-xl-10">
-			<div class="row">
-			
-				{% block app_content %}{% endblock %}
-			
-			</div>
-		</div>
-	</div>
+	<div class="row flex-nowrap">
+        <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+            <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+				<a href="{% url 'dashboard' %}" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                    <span class="fs-5 d-none d-sm-inline">Dashboard</span>
+                </a>
+                <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                    <li class="nav-item">
+                        <a href="{% url 'manageheader' %}" class="nav-link align-middle px-0">
+                            <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Manage Header</span>
+                        </a>
+                    </li>
+					<li class="nav-item">
+                        <a href="{% url 'managemain' %}" class="nav-link align-middle px-0">
+                            <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Manage mains content</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'managecontactus' %}" class="nav-link align-middle px-0">
+                            <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Manage Contact us page</span>
+                        </a>
+                    </li>
+					<li class="nav-item">
+                        <a href="{% url 'managevideocat' %}" class="nav-link align-middle px-0">
+                            <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Manage Video Category</span>
+                        </a>
+                    </li>
+					<li class="nav-item">
+                        <a href="{% url 'managevideocase' %}" class="nav-link align-middle px-0">
+                            <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Manage Video Cases</span>
+                        </a>
+                    </li>
+					<li class="nav-item">
+                        <a href="{% url 'managereelcat' %}" class="nav-link align-middle px-0">
+                            <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Manage Reel Category</span>
+                        </a>
+                    </li>
+					<li class="nav-item">
+                        <a href="{% url 'managereel' %}" class="nav-link align-middle px-0">
+                            <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Manage Reels</span>
+                        </a>
+                    </li>					
+					<li class="nav-item">
+                        <a href="{% url 'manageimgcat' %}" class="nav-link align-middle px-0">
+                            <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Manage Image Category</span>
+                        </a>
+                    </li>
+					<li class="nav-item">
+                        <a href="{% url 'manageimage' %}" class="nav-link align-middle px-0">
+                            <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Manage Images</span>
+                        </a>
+                    </li>
+					<li class="nav-item">
+                        <a href="{% url 'managegfx' %}" class="nav-link align-middle px-0">
+                            <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Manage Graphic design Images</span>
+                        </a>
+                    </li>
+					<li class="nav-item">
+                        <a href="{% url 'manageweb' %}" class="nav-link align-middle px-0">
+                            <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Manage Website designs</span>
+                        </a>
+                    </li>
+					<li class="nav-item">
+                        <a href="{% url 'managesmm' %}" class="nav-link align-middle px-0">
+                            <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Manage SMM post</span>
+                        </a>
+                    </li>
+					<li class="nav-item">
+                        <a href="{% url 'manageegsmm' %}" class="nav-link align-middle px-0">
+                            <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Manage SMM examples</span>
+                        </a>
+                    </li>
+					<li class="nav-item">
+                        <a href="{% url 'manageserv' %}" class="nav-link align-middle px-0">
+                            <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Manage Services</span>
+                        </a>
+                    </li>
+					<li class="nav-item">
+                        <a href="{% url 'manageclient' %}" class="nav-link align-middle px-0">
+                            <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Manage Client's logos</span>
+                        </a>
+                    </li>
+					<li class="nav-item">
+                        <a href="{% url 'manageaboutus' %}" class="nav-link align-middle px-0">
+                            <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Manage About us page</span>
+                        </a>
+                    </li>
+					<li class="nav-item">
+                        <a href="{% url 'managereview' %}" class="nav-link align-middle px-0">
+                            <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Manage reviews</span>
+                        </a>
+                    </li>
+
+					
+                </ul>
+                <hr>
+                <div class="dropdown pb-4">
+                    <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="https://github.com/mdo.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
+                        <span class="d-none d-sm-inline mx-1">{{user.email}}</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+                        <li><a class="dropdown-item" href="/admin">Administration Panel</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="{% url 'logout' %}">Sign out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col py-3">
+            {% block app_content %}{% endblock %}
+        </div>
+    </div>
 </div>
+
+	
 	
 	
 	
@@ -113,9 +235,9 @@
 				
 
 			<script src="{% static 'js/vendor/jquery-3.6.0.min.js' %}"></script>
-			<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+			
 			<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>-->
-			<script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>			
+			<script src="{% static 'js/bootstrap.bundle.js' %}"></script>				
 			<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
   			<script src="{% static 'js/easing.min.js' %}"></script>			
 			<script src="{% static 'js/hoverIntent.js' %}"></script>
@@ -126,6 +248,7 @@
 			<script src="{% static 'js/jquery.nice-select.min.js' %}"></script>							
 			<script src="{% static 'js/mail-script.js' %}"></script>	
 			<script src="{% static 'js/main.js' %}"></script>
+			<script src="{% static 'js/popper.min.js' %}"></script>
 <script>
 	$(document).ready(function() {
 		var modal = document.getElementById("videoModal");
@@ -169,6 +292,12 @@
 			}
 		}
 	});
-</script>			
+</script>	
+<script>
+var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+  return new bootstrap.Popover(popoverTriggerEl)
+})
+</script>		
 		</body>
 	</html>

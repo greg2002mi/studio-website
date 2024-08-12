@@ -22,6 +22,29 @@ CALL = (
     (3, _("Closed"))
 )
 
+CURRENCY = (
+    (0,_("---")),
+    (1,_("KRW")),
+    (2,_("USD")),
+    (3, _("RUB"))
+)
+
+RANK = (
+    (0,_("---")),
+    (1,_("Very unpleasant")),
+    (2,_("Unpleasant")),
+    (3,_("OK")),
+    (4,_("Good")),
+    (5,_("Excellent"))
+)
+
+LANG = (
+    (0,_("No lang")),
+    (1,_("English")),
+    (2,_("Russian")),
+    # (3, _("Korean"))
+)
+
 PAGE = (
     (0,_("None")),
     (1,_("Home")),
@@ -38,6 +61,11 @@ PAGE = (
     (12,_("Contacts")),
     (13,_("Make an order")),
     (14,_("Call me")),
+    (20,_("Order")),
+    (21,_("Write")),
+    (98,_("Success page")),
+    (99,_("Failed page")),
+    (100,_("Without title  (200) (-300)")),
 
 )
 
@@ -113,8 +141,8 @@ class Image(models.Model):
 
 
 class Header(models.Model):
-    title = models.CharField(max_length=150)
-    short = models.CharField(max_length=255)
+    title = models.CharField(max_length=150, null=True, blank=True)
+    short = models.CharField(max_length=255, null=True, blank=True)
     image = models.ImageField(upload_to=generate_filename)
     page = models.IntegerField(choices=PAGE, default=0)
     height = models.IntegerField(default=0)
@@ -208,12 +236,14 @@ class Gfx(models.Model):
 
 class Service(models.Model):
     title = models.CharField(max_length=255)
+    content = models.TextField(null=True, blank=True)
     # image = models.ImageField(upload_to="img", blank=True, null=True)
-    price = models.DecimalField(max_digits=6, decimal_places=2)
+    price = models.DecimalField(max_digits=15, decimal_places=2, null=True, blank=True)
+    currency = models.IntegerField(choices=CURRENCY, default=1)
     published = models.BooleanField(default=True)
+    lang = models.IntegerField(choices=LANG, default=2)
     # category = models.ForeignKey(ServiceCat, on_delete=models.SET_NULL, null=True, blank=True, related_name='service')
-    author = models.ForeignKey(CustomUser, on_delete=models.SET_NULL, null=True, blank=True,)
-    content = CKEditor5Field(_('Content'), config_name='extends', blank=True)
+    author = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
     updated_on = models.DateTimeField(auto_now= True)
     created_on = models.DateTimeField(auto_now_add=True)   
 
@@ -238,7 +268,7 @@ class Website(models.Model):
 # SMM -----------------------------------------------------------------   
 class SMM(models.Model):
     title = models.CharField(max_length=255)
-    content = CKEditor5Field(_('Content'), config_name='extends', blank=True)
+    en = models.CharField(max_length=255)
     updated_on = models.DateTimeField(auto_now= True)
     created_on = models.DateTimeField(auto_now_add=True)
     
@@ -246,9 +276,12 @@ class EgSMM(models.Model):
     title1 = models.CharField(max_length=255)
     short1 = models.TextField()
     image1 = models.ImageField(upload_to=generate_filename)
+    url1 = models.TextField(null=True, blank=True)
     title2 = models.CharField(max_length=255)
     short2 = models.TextField()
     image2 = models.ImageField(upload_to=generate_filename)
+    url2 = models.TextField(null=True, blank=True)
+    lang = models.IntegerField(choices=LANG, default=2)
     published = models.BooleanField(default=True)
     updated_on = models.DateTimeField(auto_now= True)
     created_on = models.DateTimeField(auto_now_add=True)
@@ -257,9 +290,11 @@ class EgSMM(models.Model):
 # about our studio -----------------------------------------------------------------   
 class Aboutus(models.Model):
     title = models.CharField(max_length=255)
-    content = CKEditor5Field(_('Content'), config_name='extends', blank=True)
-    team = models.ImageField(upload_to=generate_filename)
-    studio = models.ImageField(upload_to=generate_filename)
+    content = models.TextField(null=True, blank=True)
+    team = models.ImageField(upload_to=generate_filename, null=True, blank=True)
+    studio = models.ImageField(upload_to=generate_filename, null=True, blank=True)
+    lang = models.IntegerField(choices=LANG, default=2)
+    published = models.BooleanField(default=True)
     updated_on = models.DateTimeField(auto_now= True)
     created_on = models.DateTimeField(auto_now_add=True)
 
@@ -280,41 +315,34 @@ class Review(models.Model):
     name = models.CharField(max_length=255)
     role = models.CharField(max_length=255)
     company = models.CharField(max_length=255)
-    Content = models.TextField()
+    content = models.TextField()
     updated_on = models.DateTimeField(auto_now= True)
     created_on = models.DateTimeField(auto_now_add=True)
-
+    rank = models.IntegerField(choices=RANK, default=0)
    
 # contact info -----------------------------------------------------------------  
 class Contact(models.Model):
+    greeting = models.CharField(max_length=255)
     image = models.ImageField(upload_to=generate_filename)
     content = CKEditor5Field(_('Content'), config_name='extends', blank=True)
+    lang = models.IntegerField(choices=LANG, default=2)
     updated_on = models.DateTimeField(auto_now= True)
     created_on = models.DateTimeField(auto_now_add=True)
 
- 
-# request a call -----------------------------------------------------------------   
-class Call(models.Model):
-    name = models.CharField(max_length=255)
-    # last_name = models.CharField(max_length=255)
-    phone = PhoneNumberField(blank=True, null=True)
-    email = models.EmailField(_("email address"), unique=False, blank=True, null=True)
-    # reservation = models.DateTimeField(null=True, blank=True)
-    status = models.IntegerField(choices=CALL, default=0)
-    created_on = models.DateTimeField(auto_now_add=True)
-    # note = models.TextField()  # here to add all the info of an order
 
+# MAIN -----------------------------------------------------------------------
+class Videosam(models.Model):
+    video1 = models.FileField(upload_to=generate_vidfilename, validators=[FileExtensionValidator(allowed_extensions=['MOV','avi','mp4','webm','mkv'])])
+    video2 = models.FileField(upload_to=generate_vidfilename, validators=[FileExtensionValidator(allowed_extensions=['MOV','avi','mp4','webm','mkv'])])
+    video3 = models.FileField(upload_to=generate_vidfilename, validators=[FileExtensionValidator(allowed_extensions=['MOV','avi','mp4','webm','mkv'])])
+
+class Wedo(models.Model):
+    service = models.CharField(max_length=255)
+    en = models.CharField(max_length=255, null=True, blank=True)
+    ko = models.CharField(max_length=255, null=True, blank=True)
     
-# make order -----------------------------------------------------------------
-class Order(models.Model):
-    name = models.CharField(max_length=255)
-    # last_name = models.CharField(max_length=255)
-    phone = PhoneNumberField(blank=True, null=True)
-    email = models.EmailField(_("email address"), unique=False, blank=True, null=True)
-    # reservation = models.DateTimeField(null=True, blank=True)
-    status = models.IntegerField(choices=STATUS, default=0)
-    created_on = models.DateTimeField(auto_now_add=True)
-    note = models.TextField()  # here to add all the info of an order
 
-
-
+class Forwhom(models.Model):
+    service = models.CharField(max_length=255)
+    en = models.CharField(max_length=255, null=True, blank=True)
+    ko = models.CharField(max_length=255, null=True, blank=True)

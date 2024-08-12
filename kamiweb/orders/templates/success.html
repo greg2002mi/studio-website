@@ -1,0 +1,154 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block head_js %}
+<link rel="stylesheet" href="{% static 'css/w3.css' %}">
+<link rel="stylesheet" href="{% static 'css/dropzone.min.css' %}">
+<style>
+.banner-area {
+	background: url({{ head.image.url }}) center;   /* background image */
+	{% if head.height != 0 %}
+	height: {{ head.height }}px;      /* header height */
+	{% else %}
+	/* no height since its 0 */
+	{% endif %}
+	background-size:cover
+	}
+@media (max-width: 767.98px) {
+	.banner-area.fullscreen {
+		height:700px !important
+		}
+	}
+	.banner-area .primary-btn {
+		padding-left:30px;
+		padding-right:30px
+	}
+	.banner-area .overlay-bg {
+		background-color:rgba(4,9,30,0.7);
+		z-index: 1
+	}
+	.banner-content {
+		position: relative;
+		text-align:center;
+		z-index: 2
+	}
+	.banner-content h1 {
+	color:#fff;
+	font-size:48px;
+	font-weight:700;
+	line-height:1em;
+	margin-top:20px;
+	margin-bottom:20px
+	}
+	@media (max-width: 414px) {
+	.banner-content h1 {
+		font-size:25px
+		}
+		}
+	.banner-content p { 
+	max-width:900px
+	}
+
+.cont2 {
+  position: relative;
+  {% if head.top != 0 %}
+  top: {{ head.top }}px;      /* distance of header from top */
+  {% else %}
+  /* no top since 0 */
+  {% endif %}
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+}
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.video-thumbnail {
+    position: relative;
+    #width: 100%;
+    height: auto;
+    background-color: #f3f3f3; /* Light grey background for loading state */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-thumbnail .loading-spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #3498db; /* Blue color */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+/* Keyframes for spin animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.video-thumbnail video {
+    display: none; /* Hide video until it's loaded */
+}
+
+.video-thumbnail.loaded video {
+    display: block; /* Show video when it's loaded */
+}
+
+.video-thumbnail.loaded .loading-spinner {
+    display: none; /* Hide spinner when video is loaded */
+}
+</style>
+
+{% endblock %}
+
+{% block app_content %}
+{% load crispy_forms_tags %}  
+{% get_current_language as LANGUAGE_CODE %}
+
+<!-- start banner Area -->
+<section class="banner-area relative" id="home">
+	<div class="overlay overlay-bg"></div>
+	<div class="container cont2">
+		<div class="row justify-content-center align-items-center">
+			<div class="banner-content col-lg-9 col-md-12 justify-content-center ">
+				<h1>
+					{{ head.title }}	
+				</h1>
+				<p class="text-white mx-auto">
+					{{ head.short }}
+				</p>
+			</div>											
+		</div>
+	</div>
+</section>
+<!-- End banner Area -->				  
+
+			<!-- Start contact-page Area -->
+			<section class="contact-page-area section-gap">
+				<div class="container">
+					<div class="row">
+						<div class="card" style="background: white;text-align: center;padding: 60px;border-radius: 4px;box-shadow: 0 2px 3px #C8D0D8;display: inline-block;margin: 0 auto;">
+						  <div style="border-radius:200px; height:200px; width:200px; background: #F8FAF5; margin:0 auto;">
+							<i class="checkmark" style="color: #ea8209;font-size: 100px;line-height: 200px;margin-left:-15px;">✓</i>
+						  </div>
+							<h1 style="color: #ea8209; font-weight: 900;font-size: 40px;margin-bottom: 10px;">{% translate "Success" %}</h1> 
+							<p style="color: #404F5E; font-size: 20px; margin: 0;">{% translate "We received your request;<br/> we'll be in touch shortly!" %}</p>
+						  </div>
+						
+					</div>
+				</div>	
+			</section>
+			<!-- End contact-page Area -->
+
+{% endblock %}
+

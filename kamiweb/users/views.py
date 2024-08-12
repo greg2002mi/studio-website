@@ -29,7 +29,7 @@ def login_page(request):
             if user is not None:
                 login(request, user)
                 messages.info(request, _("You are now logged in as {}.").format(username))
-                return redirect("index")
+                return redirect("dashboard")
             else:
                 messages.error(request, _("Invalid username or password."))
         else:

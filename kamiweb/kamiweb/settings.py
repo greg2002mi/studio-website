@@ -25,7 +25,7 @@ LOGIN_REDIRECT_URL = 'index'
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-8@@(bqbs03@whue@6e!!y=6vz(5)u(^7$hgkf3ga@(-)7u@q@2'
+SECRET_KEY = env("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -55,8 +55,10 @@ INSTALLED_APPS = [
     "phonenumber_field",
     "users",
     "blog",
+    "dashboard",
     'django_ckeditor_5',
     "django_flatpickr",
+    "orders",
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
@@ -104,11 +106,11 @@ AUTH_USER_MODEL = "users.CustomUser"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'kami',
-        'USER': 'postgres',
-        'PASSWORD': 'jerusalem',
-        'HOST': 'localhost',
-        'PORT': '',
+        'NAME': env("DB_NAME"),
+        'USER': env("DB_USER"),
+        'PASSWORD': env("DB_PASSWORD"),
+        'HOST': env("DB_HOST"),
+        'PORT': env("DB_PORT"),
     }
 }
 
@@ -157,20 +159,31 @@ USE_L10N = True
 
 USE_TZ = True
 
+# telegram bot settings
+TELEGRAM_BOT_TOKEN = env("TELE_TOKEN")
+CHAT_ID = env("CHAT_ID")  # поменять потом на Татьянин айди
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')   # upon deployment to change to actual location along with nginx eg. /var/www/static/
 STATICFILES_DIRS = [
     BASE_DIR / "static",
-    # "/var/www/static/",
+    # instead of base_dir change it to "/var/www/static/",
 ]
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # upon deployment to change to actual location along with nginx eg. /var/www/media/
 MEDIA_URL = "/media/"
 
+# path to the custom CSS file
+# CKEDITOR_5_CUSTOM_CSS = 'ckedit5/admin_dark_mode_fix.css'
+# CKEDITOR_5_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage' # optional
+# # CKEDITOR_ALLOW_NONIMAGE_FILES = False
+# CKEDITOR_5_ALLOW_ALL_FILE_TYPES = True
+# CKEDITOR_5_UPLOAD_FILE_TYPES = ['jpeg', 'pdf', 'png']
+# CKEDITOR_5_USER_LANGUAGE=True
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
@@ -199,6 +212,7 @@ CKEDITOR_5_CONFIGS = {
             "blockQuote",
             "imageUpload"
         ],
+        'language': {"ui": ['ru', 'en'] },
     },
     "comment": {
         "language": {"ui": "en", "content": "en"},

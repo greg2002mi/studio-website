@@ -3,519 +3,365 @@
 {% load static %}
 
 {% block head_js %}
+<style>
+.banner-area {
+	background: url({{ head.image.url }}) center;   /* background image */
+	{% if head.height != 0 %}
+	height: {{ head.height }}px;      /* header height */
+	{% else %}
+	/* no height since its 0 */
+	{% endif %}
+	background-size:cover
+	}
+@media (max-width: 767.98px) {
+	.banner-area.fullscreen {
+		height:700px !important
+		}
+	}
+	.banner-area .primary-btn {
+		padding-left:30px;
+		padding-right:30px
+	}
+	.banner-area .overlay-bg {
+		background-color:rgba(4,9,30,0.7);
+		z-index: 1
+	}
+	.banner-content {
+		position: relative;
+		text-align:center;
+		z-index: 2
+	}
+	.banner-content h1 {
+	color:#fff;
+	font-size:48px;
+	font-weight:700;
+	line-height:1em;
+	margin-top:20px;
+	margin-bottom:20px
+	}
+	@media (max-width: 414px) {
+	.banner-content h1 {
+		font-size:25px
+		}
+		}
+	.banner-content p { 
+	max-width:900px
+	}
 
+.cont2 {
+  position: relative;
+  {% if head.top != 0 %}
+  top: {{ head.top }}px;      /* distance of header from top */
+  {% else %}
+  /* no top since 0 */
+  {% endif %}
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+}
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.video-thumbnail {
+    position: relative;
+    #width: 100%;
+    height: auto;
+    background-color: #f3f3f3; /* Light grey background for loading state */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-thumbnail .loading-spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #3498db; /* Blue color */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+/* Keyframes for spin animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.video-thumbnail video {
+    display: none; /* Hide video until it's loaded */
+}
+
+.video-thumbnail.loaded video {
+    display: block; /* Show video when it's loaded */
+}
+
+.video-thumbnail.loaded .loading-spinner {
+    display: none; /* Hide spinner when video is loaded */
+}
+</style>
+
+<style>
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1050;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.9);
+	justify-content: center;
+	align-items: center;
+}
+
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  top: 150px;
+  width: 80%;
+  max-width: 700px;
+  position: relative;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+	width: 100%;
+  }
+}
+			
+</style>
 {% endblock %}
 
 {% block app_content %}
 {% load crispy_forms_tags %}  
+{% get_current_language as LANGUAGE_CODE %}
+
+<!-- start banner Area -->
+<section class="banner-area relative" id="home">
+	<div class="overlay overlay-bg"></div>
+	<div class="container cont2">
+		<div class="row justify-content-center align-items-center">
+			<div class="banner-content col-lg-9 col-md-12 mb-10 justify-content-center ">
+				<h1>
+					{{ head.title }}	
+				</h1>
+				<p class="text-white mx-auto">
+					{{ head.short }}
+				</p>
+				<div class="title text-center">
+					<a class="genric-btn primary circle" type="submit" href="{% url 'write_review' %}" style="float: right;" data-aos="fade-down">{% translate "Write Review" %}</a>
+					<p></p>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</section>
+<!-- End banner Area -->
 
 
-			<!-- start banner Area -->
-			<section class="banner-area relative" id="home">
-				<div class="overlay overlay-bg"></div>
-				<div class="container">
-					<div class="row fullscreen d-flex justify-content-center align-items-center">
-						<div class="banner-content col-lg-9 col-md-12 justify-content-center ">
-							<h1>
-								Precise concept design <br>
-								for stylish living			
-							</h1>
-							<p class="text-white mx-auto">
-								If you are looking at blank cassettes on the web, you may be very confused at the difference in price. You may see some for as low as $.17 each. You may be saying to yourself.
-							</p>
-						</div>											
+<!-- Start testimonial Area -->
+<section class="testimonial-area pt-120">
+	<div class="container">
+		<div class="row d-flex justify-content-center">
+			<div class="menu-content pb-70 col-lg-8">
+				<div class="title text-center">
+					<h1 class="mb-10">{% translate "Latest testimonials" %}</h1>
+					<p></p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="active-testimonial-carusel">
+				{% for lr in latest_reviews %}
+				<div class="single-testimonial item d-flex flex-row">
+					<div class="desc">
+						<p>
+							{{lr.content}}
+						</p>
+						<h4 mt-30>{{lr.name}}</h4>
+						<p>{% if lr.role %}{{lr.role}} | {% endif %} {{lr.company}} </p>
+						<div class="star">
+							<span class="fa fa-star {% if lr.rank > 0 %}checked {% endif %}"></span>
+							<span class="fa fa-star {% if lr.rank > 1 %}checked {% endif %}"></span>
+							<span class="fa fa-star {% if lr.rank > 2 %}checked {% endif %}"></span>
+							<span class="fa fa-star {% if lr.rank > 3 %}checked {% endif %}"></span>
+							<span class="fa fa-star {% if lr.rank > 4 %}checked {% endif %}"></span>								
+						</div>			                            
 					</div>
 				</div>
-			</section>
-			<!-- End banner Area -->
-			
-			<!-- Start service Area -->
-			<section class="service-area section-gap" id="service">
-				<div class="container">
-					<div class="row justify-content-center">
-						<div class="col-md-12 pb-50 header-text text-center">
-							<h1 class="mb-10">What we offer to our clients</h1>
-							<p>
-								Who are in extremely love with eco friendly system..
-							</p>
-						</div>
-					</div>						
-					<div class="row">
-						<div class="col-lg-4">
-							<div class="single-service">
-								<a href="#"><h4>Interior Design</h4></a>
-								<p>
-									Sony laptops are among the most well known laptops on today’s market. Sony is a name that over time has established itself as creating a solid product.
-								</p>
-							</div>
-						</div>	
-						<div class="col-lg-4">
-							<div class="single-service">
-								<a href="#"><h4>Architecture Design</h4></a>
-								<p>
-									Computer users and programmers have become so accustomed to using Windows, even for the changing capabilities and the appearances of the graphical.
-								</p>
-							</div>
-						</div>	
-						<div class="col-lg-4">
-							<div class="single-service">
-								<a href="#"><h4>Concept Design</h4></a>
-								<p>
-									Can you imagine what we will be downloading in another twenty years? I mean who would have ever thought that you could record sound.
-								</p>
-							</div>
-						</div>																													
-					</div>
-				</div>	
-			</section>
-			<!-- End service Area -->
+				{% endfor %}		                    
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End testimonial Area -->	
 
-			<!-- Start gallery Area -->
-			<section class="gallery-area pb-120">
-				<div class="container">
-					<div class="row d-flex justify-content-center">
-						<div class="col-md-12 pb-40 header-text text-center">
-							<h1 class="pb-10">Our Recent Works may impress you</h1>
-							<p>
-								Who are in extremely love with eco friendly system.
-							</p>
-						</div>
-					</div>							
-					<div class="row">
-						<div class="col-lg-8">
-							<div class="single-gallery">
-								<div class="content">
-								    <a href="#" target="_blank">
-								      <div class="content-overlay"></div>
-								  		 <img class="content-image img-fluid d-block mx-auto" src="{% static 'img/g1.jpg' %}" alt="">
-								      <div class="content-details fadeIn-bottom">
-								        <h3 class="content-title mx-auto">Lavendar ambient interior</h3>
-								        <a href="project-details.html" class="primary-btn text-uppercase mt-20">More Details</a>
-								      </div>
-								    </a>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4">
-							<div class="single-gallery">
-								<div class="content">
-								    <a href="#" target="_blank">
-								      <div class="content-overlay"></div>
-								  		 <img class="content-image img-fluid d-block mx-auto" src="{% static 'img/g2.jpg' %}" alt="">
-								      <div class="content-details fadeIn-bottom">
-								        <h3 class="content-title mx-auto">Ambient interior</h3>
-								        <a href="project-details.html" class="primary-btn text-uppercase mt-20">More Details</a>
-								      </div>
-								    </a>
-								</div>
-							</div>
-						</div>	
-						<div class="col-lg-4">
-							<div class="single-gallery">
-								<div class="content">
-								    <a href="#" target="_blank">
-								      <div class="content-overlay"></div>
-								  		 <img class="content-image img-fluid d-block mx-auto" src="{% static 'img/g3.jpg' %}" alt="">
-								      <div class="content-details fadeIn-bottom">
-								        <h3 class="content-title mx-auto">Ambient interior</h3>
-								        <a href="project-details.html" class="primary-btn text-uppercase mt-20">More Details</a>
-								      </div>
-								    </a>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-8">
-							<div class="single-gallery">
-								<div class="content">
-								    <a href="#" target="_blank">
-								      <div class="content-overlay"></div>
-								  		 <img class="content-image img-fluid d-block mx-auto" src="{% static 'img/g4.jpg' %}" alt="">
-								      <div class="content-details fadeIn-bottom">
-								        <h3 class="content-title mx-auto">Lavendar ambient interior</h3>
-								        <a href="project-details.html" class="primary-btn text-uppercase mt-20">More Details</a>
-								      </div>
-								    </a>
-								</div>
-							</div>
-						</div>												
-					</div>
-				</div>	
-			</section>
-			<!-- End gallery Area -->
-				
-			<!-- Start feature Area -->
-			<section class="feature-area section-gap">
-				<div class="container">
-					<div class="row d-flex justify-content-center">
-						<div class="col-md-12 pb-40 header-text text-center">
-							<h1 class="pb-10 text-white">Some Features that Made us Unique</h1>
-							<p class="text-white">
-								Who are in extremely love with eco friendly system.
-							</p>
-						</div>
-					</div>							
-					<div class="row">
-						<div class="col-lg-4 col-md-6">
-							<div class="single-feature">
-								<a href="#" class="title d-flex flex-row align-items-center">
-									<span class="lnr lnr-user"></span>
-									<h4>Expert Technicians</h4>
-								</a>
-								<p>
-									Computer users and programmers have become so accustomed to using Windows, even for the changing.
-								</p>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-6">
-							<div class="single-feature">
-								<a href="#" class="title d-flex flex-row align-items-center">
-									<span class="lnr lnr-license"></span>
-									<h4>Professional Service</h4>
-								</a>
-								<p>
-									Finding the perfect learning tool for Flash is a daunting task to any novice web developer. One can find help.
-								</p>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-6">
-							<div class="single-feature">
-								<a href="#" class="title d-flex flex-row align-items-center">
-									<span class="lnr lnr-phone"></span>
-									<h4>Great Support</h4>
-								</a>
-								<p>
-									While most people enjoy casino ambling, sports betting, lottery and bingo playing for the fun and excitement.
-								</p>
-							</div>
-						</div>						
-						<div class="col-lg-4 col-md-6">
-							<div class="single-feature">
-								<a href="#" class="title d-flex flex-row align-items-center">
-									<span class="lnr lnr-rocket"></span>
-									<h4>Technical Skills</h4>
-								</a>
-								<p>
-									“The moment you think of buying a Web Hosting Plan, you know one thing – So many choices, which one to choose.
-								</p>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-6">
-							<div class="single-feature">
-								<a href="#" class="title d-flex flex-row align-items-center">
-									<span class="lnr lnr-diamond"></span>
-									<h4>Highly Recomended</h4>
-								</a>
-								<p>
-									Many conventional colleges and universities are now offering online DVD repair courses, which are the exact same.
-								</p>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-6">
-							<div class="single-feature">
-								<a href="#" class="title d-flex flex-row align-items-center">
-									<span class="lnr lnr-bubble"></span>
-									<h4>Positive Reviews</h4>
-								</a>
-								<p>
-									So you have your new digital camera and clicking away to glory anything and everything in sight. Now you want.
-								</p>
-							</div>
-						</div>	
 
+<!-- Start testimonial Area -->
+<section class="testimonial-area pt-120">
+	<div class="container">
+		<div class="row d-flex justify-content-center">
+			<div class="menu-content pb-70 col-lg-8">
+				<div class="title text-center">
+					<h1 class="mb-10">{% translate "Testimonial from our Clients" %}</h1>
+					<p></p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			{% for lr in reviews %}
+			<div class="col-lg-4 pb-20" onclick="document.getElementById('modal{{lr.id}}').style.display='block'">
+				<div class="single-testimonial item d-flex flex-row">
+					<div class="desc" onclick="document.getElementById('modal{{lr.id}}').style.display='block'">
+						<p>
+							{{lr.content | truncatechars:50 }}
+						</p>
+						<h4 mt-30>{{lr.name}}</h4>
+						<p>{% if lr.role %}{{lr.role}} | {% endif %} {{lr.company}} </p>
+						<div class="star">
+							<span class="fa fa-star {% if lr.rank > 0 %}checked {% endif %}"></span>
+							<span class="fa fa-star {% if lr.rank > 1 %}checked {% endif %}"></span>
+							<span class="fa fa-star {% if lr.rank > 2 %}checked {% endif %}"></span>
+							<span class="fa fa-star {% if lr.rank > 3 %}checked {% endif %}"></span>
+							<span class="fa fa-star {% if lr.rank > 4 %}checked {% endif %}"></span>								
+						</div>		                            
 					</div>
-				</div>	
-			</section>
-			<!-- End feature Area -->		
-		
-		    <!-- Start testimonial Area -->
-		    <section class="testimonial-area pt-120">
-		        <div class="container">
-		            <div class="row d-flex justify-content-center">
-		                <div class="menu-content pb-70 col-lg-8">
-		                    <div class="title text-center">
-		                        <h1 class="mb-10">Testimonial from our Clients</h1>
-		                        <p>Who are in extremely love with eco friendly system.</p>
-		                    </div>
-		                </div>
-		            </div>
-		            <div class="row">
-		                <div class="active-testimonial-carusel">
-		                    <div class="single-testimonial item d-flex flex-row">
-		                        <div class="thumb">
-		                            <img class="img-fluid" src="{% static 'img/elements/user1.png' %}" alt="">
-		                        </div>
-		                        <div class="desc">
-		                            <p>
-		                                Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware.
-		                            </p>
-		                            <h4 mt-30>Mark Alviro Wiens</h4>
-									<div class="star">
-										<span class="fa fa-star checked"></span>
-										<span class="fa fa-star checked"></span>
-										<span class="fa fa-star checked"></span>
-										<span class="fa fa-star checked"></span>
-										<span class="fa fa-star"></span>								
-									</div>			                            
-		                        </div>
-		                    </div>
-		                    <div class="single-testimonial item d-flex flex-row">
-		                        <div class="thumb">
-		                            <img class="img-fluid" src="{% static 'img/elements/user2.png' %}" alt="">
-		                        </div>
-		                        <div class="desc">
-		                            <p>
-		                                Hypnosis quit smoking methods maintain caused quite world over the last two decades. There is a lot of argument pertaining to
-		                            </p>
-		                            <h4 mt-30>Lina Harrington</h4>
-									<div class="star">
-										<span class="fa fa-star checked"></span>
-										<span class="fa fa-star checked"></span>
-										<span class="fa fa-star checked"></span>
-										<span class="fa fa-star"></span>
-										<span class="fa fa-star"></span>								
-									</div>			                            
-		                        </div>
-		                    </div>
-		                    <div class="single-testimonial item d-flex flex-row">
-		                        <div class="thumb">
-		                            <img class="img-fluid" src="{% static 'img/elements/user1.png' %}" alt="">
-		                        </div>
-		                        <div class="desc">
-		                            <p>
-		                                Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware.
-		                            </p>
-		                            <h4 mt-30>Mark Alviro Wiens</h4>
-									<div class="star">
-										<span class="fa fa-star checked"></span>
-										<span class="fa fa-star checked"></span>
-										<span class="fa fa-star checked"></span>
-										<span class="fa fa-star checked"></span>
-										<span class="fa fa-star"></span>								
-									</div>			                            
-		                        </div>
-		                    </div>
-		                    <div class="single-testimonial item d-flex flex-row">
-		                        <div class="thumb">
-		                            <img class="img-fluid" src="{% static 'img/elements/user2.png' %}" alt="">
-		                        </div>
-		                        <div class="desc">
-		                            <p>
-		                                Hypnosis quit smoking methods maintain caused quite world over the last two decades. There is a lot of argument pertaining to
-		                            </p>
-		                            <h4 mt-30>Lina Harrington</h4>
-									<div class="star">
-										<span class="fa fa-star checked"></span>
-										<span class="fa fa-star checked"></span>
-										<span class="fa fa-star"></span>
-										<span class="fa fa-star"></span>
-										<span class="fa fa-star"></span>								
-									</div>			                            
-		                        </div>
-		                    </div>		                    
-		                </div>
-		            </div>
-		        </div>
-		    </section>
-		    <!-- End testimonial Area -->	
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+		<!-- Pagination Controls -->
+        <div class="row">
+            <div class="col-lg-12 d-flex justify-content-center">
+                <nav aria-label="Page navigation">
+                    <ul class="pagination">
+                        {% if reviews.has_previous %}
+                            <li class="page-item">
+                                <a class="page-link" href="?page={{ reviews.previous_page_number }}" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                        {% else %}
+                            <li class="page-item disabled">
+                                <span class="page-link">&laquo;</span>
+                            </li>
+                        {% endif %}
 
-			<!-- Start callto-action Area -->
-			<section class="callto-action-area pt-120">
-				<div class="container">
-					<div class="row justify-content-center">
-						<div class="callto-action-wrap col-lg-12 relative section-gap">
-							<div class="content">
-								<h1>
-									Looking for a <br>
-									quality and affordable interior design?
-								</h1>
-								<p class="mx-auto">
-									inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially in the workplace.
-								</p>
-								<a href="#" class="primary-btn text-uppercase">Request quote now</a>			
-							</div>							
-						</div>
-					</div>
-				</div>	
-			</section>
-			<!-- End callto-action Area -->
-								
-			<!-- Start blog Area -->
-			<section class="blog-area section-gap">
-				<div class="container">
-					<div class="row d-flex justify-content-center">
-						<div class="menu-content pb-60 col-lg-9">
-							<div class="title text-center">
-								<h1 class="mb-10">Ongoing Exhibitions from the scratch</h1>
-								<p>Who are in extremely love with eco friendly system.</p>
-							</div>
-						</div>
-					</div>							
-					<div class="row">
-						<div class="active-blog-carusel">
-							<div class="single-blog-post item">
-								<div class="thumb">
-									<img class="img-fluid" src="{% static 'img/b1.jpg' %}" alt="">
-								</div>
-								<div class="details">
-									<div class="tags">
-										<ul>
-											<li>
-												<a href="#">Travel</a>
-											</li>
-											<li>
-												<a href="#">Life Style</a>
-											</li>											
-										</ul>
-									</div>
-									<a href="#"><h4 class="title">Low Cost Advertising</h4></a>
-									<p>
-										Acres of Diamonds… you’ve read the famous story, or at least had it related to you. A farmer.
-									</p>
-									<h6 class="date">31st January,2018</h6>
-								</div>	
-							</div>
-							<div class="single-blog-post item">
-								<div class="thumb">
-									<img class="img-fluid" src="{% static 'img/b2.jpg' %}" alt="">
-								</div>
-								<div class="details">
-									<div class="tags">
-										<ul>
-											<li>
-												<a href="#">Travel</a>
-											</li>
-											<li>
-												<a href="#">Life Style</a>
-											</li>											
-										</ul>
-									</div>
-									<a href="#"><h4 class="title">Creative Outdoor Ads</h4></a>
-									<p>
-										Acres of Diamonds… you’ve read the famous story, or at least had it related to you. A farmer.
-									</p>
-									<h6 class="date">31st January,2018</h6>
-								</div>	
-							</div>
-							<div class="single-blog-post item">
-								<div class="thumb">
-									<img class="img-fluid" src="{% static 'img/b3.jpg' %}" alt="">
-								</div>
-								<div class="details">
-									<div class="tags">
-										<ul>
-											<li>
-												<a href="#">Travel</a>
-											</li>
-											<li>
-												<a href="#">Life Style</a>
-											</li>											
-										</ul>
-									</div>
-									<a href="#"><h4 class="title">It's Classified How To Utilize Free</h4></a>
-									<p>
-										Acres of Diamonds… you’ve read the famous story, or at least had it related to you. A farmer.
-									</p>
-									<h6 class="date">31st January,2018</h6>
-								</div>	
-							</div>	
-							<div class="single-blog-post item">
-								<div class="thumb">
-									<img class="img-fluid" src="{% static 'img/b1.jpg' %}" alt="">
-								</div>
-								<div class="details">
-									<div class="tags">
-										<ul>
-											<li>
-												<a href="#">Travel</a>
-											</li>
-											<li>
-												<a href="#">Life Style</a>
-											</li>											
-										</ul>
-									</div>
-									<a href="#"><h4 class="title">Low Cost Advertising</h4></a>
-									<p>
-										Acres of Diamonds… you’ve read the famous story, or at least had it related to you. A farmer.
-									</p>
-									<h6 class="date">31st January,2018</h6>
-								</div>	
-							</div>
-							<div class="single-blog-post item">
-								<div class="thumb">
-									<img class="img-fluid" src="{% static 'img/b2.jpg' %}" alt="">
-								</div>
-								<div class="details">
-									<div class="tags">
-										<ul>
-											<li>
-												<a href="#">Travel</a>
-											</li>
-											<li>
-												<a href="#">Life Style</a>
-											</li>											
-										</ul>
-									</div>
-									<a href="#"><h4 class="title">Creative Outdoor Ads</h4></a>
-									<p>
-										Acres of Diamonds… you’ve read the famous story, or at least had it related to you. A farmer.
-									</p>
-									<h6 class="date">31st January,2018</h6>
-								</div>	
-							</div>
-							<div class="single-blog-post item">
-								<div class="thumb">
-									<img class="img-fluid" src="{% static 'img/b3.jpg' %}" alt="">
-								</div>
-								<div class="details">
-									<div class="tags">
-										<ul>
-											<li>
-												<a href="#">Travel</a>
-											</li>
-											<li>
-												<a href="#">Life Style</a>
-											</li>											
-										</ul>
-									</div>
-									<a href="#"><h4 class="title">It's Classified How To Utilize Free</h4></a>
-									<p>
-										Acres of Diamonds… you’ve read the famous story, or at least had it related to you. A farmer.
-									</p>
-									<h6 class="date">31st January,2018</h6>
-								</div>	
-							</div>														
+                        {% for i in reviews.paginator.page_range %}
+                            {% if reviews.number == i %}
+                                <li class="page-item active"><span class="page-link">{{ i }}</span></li>
+                            {% else %}
+                                <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+                            {% endif %}
+                        {% endfor %}
 
-						</div>
-					</div>
-				</div>	
-			</section>
-			<!-- End blog Area -->
+                        {% if reviews.has_next %}
+                            <li class="page-item">
+                                <a class="page-link" href="?page={{ reviews.next_page_number }}" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        {% else %}
+                            <li class="page-item disabled">
+                                <span class="page-link">&raquo;</span>
+                            </li>
+                        {% endif %}
+                    </ul>
+                </nav>
+            </div>
+		</div>
+	</div>
+</section>
+<!-- End testimonial Area -->	
 
-			<!-- Start brands Area -->
-			<section class="brands-area pb-60 pt-60">
-				<div class="container no-padding">
-					<div class="brand-wrap">
-						<div class="row align-items-center active-brand-carusel justify-content-start no-gutters">
-							<div class="col single-brand">
-								<a href="#"><img class="mx-auto" src="{% static 'img/l1.png' %}" alt=""></a>
-							</div>
-							<div class="col single-brand">
-								<a href="#"><img class="mx-auto" src="{% static 'img/l2.png' %}" alt=""></a>
-							</div>
-							<div class="col single-brand">
-								<a href="#"><img class="mx-auto" src="{% static 'img/l3.png' %}" alt=""></a>
-							</div>
-							<div class="col single-brand">
-								<a href="#"><img class="mx-auto" src="{% static 'img/l4.png' %}" alt=""></a>
-							</div>
-							<div class="col single-brand">
-								<a href="#"><img class="mx-auto" src="{% static 'img/l5.png' %}" alt=""></a>
-							</div>								
-						</div>																			
-					</div>
+{% for lr in reviews %}
+<div id="modal{{lr.id}}" class="modal" onclick="this.style.display='none'">
+<span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+	<div class="modal-content w3-animate-zoom">
+	  <div class="single-testimonial item d-flex flex-row">
+			<div class="desc">
+				<p>
+					{{lr.content }}
+				</p>
+				<h4 mt-30>{{lr.name}}</h4>
+				<p>{% if lr.role %}{{lr.role}} | {% endif %} {{lr.company}} </p>
+				<div class="star">
+					<span class="fa fa-star {% if lr.rank > 0 %}checked {% endif %}"></span>
+					<span class="fa fa-star {% if lr.rank > 1 %}checked {% endif %}"></span>
+					<span class="fa fa-star {% if lr.rank > 2 %}checked {% endif %}"></span>
+					<span class="fa fa-star {% if lr.rank > 3 %}checked {% endif %}"></span>
+					<span class="fa fa-star {% if lr.rank > 4 %}checked {% endif %}"></span>								
 				</div>	
-			</section>
-			<!-- End brands Area -->			
+			</div>
+	   </div>
+	</div>
+</div>
+{% endfor %}
+
+
+
 
 
 
