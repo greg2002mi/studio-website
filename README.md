@@ -17,7 +17,8 @@ Website written in Django API. contents can be edited or renewed either via dash
    TELEGRAM_BOT_TOKEN = "here paste telegram bot api key"
    CHAT_ID = "telegram id of person who will recieve requests from visitors"
 ```
-     Text can be altered in message variable:
+
+Text can be altered in message variable:
        orders.views.py
 ```
 def order(request...
@@ -68,6 +69,7 @@ A free Template has been used, which has been taken from Colorlib.com
    ``` python manage.py migrate ```
 6. create superuser ``` python manage.py createsuperuser ```
 7. and start project ``` python manage.py runserver ```
+8. go to dashboard by this link ``` 127.0.0.1:8000/dashboard ```
 
 So here we go. populate all of the sections via dashboard, and website is ready to use.
 
