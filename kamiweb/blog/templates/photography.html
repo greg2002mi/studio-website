@@ -241,10 +241,10 @@
 					{% for i in images %}
 						{% if i.category == c %}
 							{% if i.published %}
-								<div class="col-lg-3">
+								<div class="col-lg-3 col-md-6 col-sm-12">
 									<div class="single-gallery">
 										<div class="content">
-											<img src="{{i.image.url}}" style="width: 300px;cursor:zoom-in" onclick="document.getElementById('modal{{i.id}}').style.display='block'" class="rounded shadow img-fluid" alt="nice gallery image" width="300">
+											<img src="{{i.image.url}}" style="cursor:zoom-in" onclick="document.getElementById('modal{{i.id}}').style.display='block'" class="rounded shadow img-fluid" alt="nice gallery image">
 										</div>
 										<!-- if title is needed
 										<p>
